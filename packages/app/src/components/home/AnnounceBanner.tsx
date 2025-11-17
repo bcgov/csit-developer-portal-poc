@@ -25,8 +25,14 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+export enum AnnouncementIds {
+  Wizards = 0,
+  Discussions,
+  // add new announcement ids here
+}
+
 interface AnnounceBannerProps {
-  id: number; // increment the element's id for new announcements
+  id: AnnouncementIds; // increment the element's id for new announcements
   title: string;
 }
 
@@ -38,7 +44,7 @@ export const AnnounceBanner = ({
   // show the banner if announceBannerStateId is unset, or for a previous announcement
   const [isOpen, setIsOpen] = useState(() => {
     const bannerStateId = localStorage.getItem('announceBannerStateId');
-    return !bannerStateId || +bannerStateId < props.id;
+    return !bannerStateId || parseInt(bannerStateId, 10) < props.id;
   });
 
   if (!isOpen) return null;

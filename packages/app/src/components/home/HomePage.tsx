@@ -5,7 +5,7 @@ import { makeStyles, Typography } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { BCGovBannerText, BCGovHeaderText } from './HomeHeaderText';
 import { HomePageCards } from './HomePageCards';
-import { AnnounceBanner } from './AnnounceBanner';
+import { AnnounceBanner, AnnouncementIds } from './AnnounceBanner';
 import * as tokens from '@bcgov/design-tokens/js';
 
 const useStyles = makeStyles({
@@ -71,7 +71,7 @@ const HomePage = () => {
     <Page themeId="home">
       <GlobalStyle />
       <Content>
-        <AnnounceBanner id={1} title="Search GitHub Discussions">
+        <AnnounceBanner id={AnnouncementIds.Discussions} title="Search GitHub Discussions">
           <Typography>
             <Link to="/settings">Sign In</Link>
             {' '}to enable searching GitHub Discussions directly from DevHub
