@@ -18,6 +18,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     alignItems: 'center',
     gap: tokens.layoutMarginSmall,
+    marginLeft: tokens.layoutMarginMedium,
   },
   closeBtn: {
     marginLeft: tokens.layoutMarginXxlarge,
@@ -34,11 +35,11 @@ export const AnnounceBanner = ({
   ...props
 }: PropsWithChildren<AnnounceBannerProps>) => {
   const classes = useStyles();
-  const bannerStateId = localStorage.getItem('announceBannerStateId');
   // show the banner if announceBannerStateId is unset, or for a previous announcement
-  const [isOpen, setIsOpen] = useState(
-    !bannerStateId || +bannerStateId < props.id,
-  );
+  const [isOpen, setIsOpen] = useState(() => {
+    const bannerStateId = localStorage.getItem('announceBannerStateId');
+    return !bannerStateId || +bannerStateId < props.id;
+  });
 
   if (!isOpen) return null;
 
