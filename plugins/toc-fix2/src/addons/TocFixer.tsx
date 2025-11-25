@@ -23,6 +23,7 @@ export const TocFixer = () => {
 	const onThisPageHeadingInToc = useShadowRootElements<HTMLImageElement>(['div[data-md-type="toc"] a[href*="on-this-page"]'] );
 	const tocHeading = useShadowRootElements<HTMLLabelElement>(['label[for="__toc"]']);
 	const sidebarScrollWrap = useShadowRootElements<HTMLDivElement>(['div[class=md-sidebar__scrollwrap]']);
+	const iframeReferrer = useShadowRootElements<HTMLIFrameElement>(['iframe[src*="youtube.com"]']);
 
 	useEffect(() => {
 		onThisPageHeading.forEach(match => {
@@ -56,6 +57,12 @@ export const TocFixer = () => {
 			match.style.overflowY = 'hidden';
 		});
 	}, [sidebarScrollWrap]);
+
+	useEffect(() => {
+		iframeReferrer.forEach(match => {
+			match.referrerPolicy = 'strict-origin-when-cross-origin';
+		});
+	}, [iframeReferrer]);
 
 	// Nothing to render directly, so we can just return null.
 	return null;
