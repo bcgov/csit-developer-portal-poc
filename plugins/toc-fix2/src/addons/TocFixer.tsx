@@ -58,6 +58,9 @@ export const TocFixer = () => {
 		});
 	}, [sidebarScrollWrap]);
 
+	// YouTube is requiring Referrer header for embeds, but techdocs DOMPurify strips out referrerpolicy from iframes.
+	// There's an open Backstage PR to add allowedAttributes to TechDocs sanitizer config, which would better address this issue.
+	// https://github.com/backstage/backstage/pull/27793
 	useEffect(() => {
 		iframeReferrer.forEach(match => {
 			match.referrerPolicy = 'strict-origin-when-cross-origin';
