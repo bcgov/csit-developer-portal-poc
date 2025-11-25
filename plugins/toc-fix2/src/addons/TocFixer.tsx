@@ -61,6 +61,10 @@ export const TocFixer = () => {
 	useEffect(() => {
 		iframeReferrer.forEach(match => {
 			match.referrerPolicy = 'strict-origin-when-cross-origin';
+			// Force reload by resetting src
+			const src = match.src;
+			match.src = '';
+			match.src = src;
 		});
 	}, [iframeReferrer]);
 
