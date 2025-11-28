@@ -67,7 +67,6 @@ export const TocFixer = () => {
 				return;
 			}
 
-			console.log('Applying referrerPolicy fix to YouTube iframe');
 			match.referrerPolicy = 'strict-origin-when-cross-origin';
 			// Force reload of iframe by resetting src
 			const src = match.src;
