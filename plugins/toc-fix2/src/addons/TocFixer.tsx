@@ -67,11 +67,9 @@ export const TocFixer = () => {
 				return;
 			}
 
-			match.referrerPolicy = 'strict-origin-when-cross-origin';
-			// Force reload of iframe by resetting src
-			const src = match.src;
-			match.src = '';
-			match.src = src;
+			const newIframe = match.cloneNode(true) as HTMLIFrameElement;
+			newIframe.referrerPolicy = 'strict-origin-when-cross-origin';
+			match.parentNode?.replaceChild(newIframe, match);
 		});
 	}, [iframeReferrer]);
 
