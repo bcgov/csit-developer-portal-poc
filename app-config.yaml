@@ -57,6 +57,59 @@ backend:
   cache:
     store: memory
   # workingDirectory: /tmp # Use this to configure a working directory for the scaffolder, defaults to the OS temp-dir
+  reading:
+    allow:
+      # Allow BC Data Catalogue host access from backend
+      - host: catalogue.data.gov.bc.ca
+        scheme: https
+      - host: toyger.data.gov.bc.ca
+        scheme: https
+      - host: raw.githubusercontent.com
+        scheme: https
+      - host: services6.arcgis.com
+        scheme: https
+      - host: governmentofbc.maps.arcgis.com
+        scheme: https
+      - host: www2.gov.bc.ca
+        scheme: https
+      - host: openmaps.gov.bc.ca
+        scheme: https
+      - host: www.arcgis.com
+        scheme: https
+      - host: bcgov03.maps.arcgis.com
+        scheme: https
+      - host: bcparks.api.gov.bc.ca
+        scheme: https
+      - host: bcgov03.maps.arcgis.com
+        scheme: https
+      - host: apps.gov.bc.ca
+        scheme: https
+      - host: maps.gov.bc.ca
+        scheme: https
+      - host: experience.arcgis.com
+        scheme: https
+      - host: soil-relocation-information-system-governmentofbc.hub.arcgis.com
+        scheme: https
+      - host: survey123.arcgis.com
+        scheme: https
+      - host: www03.cmhc-schl.gc.ca
+        scheme: https 
+      - host: www.bclaws.ca
+        scheme: https 
+      - host: oas-editor.apps.gov.bc.ca"
+        scheme: https
+      - host: orgbook.gov.bc.ca
+        scheme: https 
+      - host: services1.arcgis.com
+        scheme: https 
+      - host: bcgov.github.io
+        scheme: https 
+      - host: jh-etk.api.gov.bc.ca
+        scheme: https 
+      - host: api.open511.gov.bc.ca
+        scheme: https
+      - host: oas-editor.apps.gov.bc.ca
+        scheme: https
 
 permission:
   enabled: true
@@ -121,10 +174,12 @@ techdocs:
 catalog:
   useUrlReadersSearch: true
   providers:
-    githubOrg:
-      - id: production
-        githubUrl: 'https://github.com'
-        orgs: ['bcgov']
-        schedule:
-          frequency: { minutes: 60 }
-          timeout: { minutes: 15 }
+    bc-data-catalogue-apis:
+      env: dev
+    # githubOrg:
+    #   - id: production
+    #     githubUrl: 'https://github.com'
+    #     orgs: ['bcgov']
+    #     schedule:
+    #       frequency: { minutes: 60 }
+    #       timeout: { minutes: 15 }

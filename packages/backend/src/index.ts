@@ -32,4 +32,6 @@ backend.add(import('./extensions/permissionsPolicyExtension'));
 
 backend.add(import('@backstage/plugin-auth-backend-module-guest-provider'));
 backend.add(import('@app/scaffolder-backend-module-snowplow'));
+
+backend.add(import('@bcgov/plugin-catalog-backend-module-bc-data-catalogue'));
 backend.start();
