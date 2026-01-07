@@ -8,6 +8,10 @@ env:
   REPOSITORY_NAME: ${{ github.repository }}
 
 on:
+  push:
+    branches:
+      - 'main'
+      - 'feature/**'
   workflow_call:
 
 jobs:
