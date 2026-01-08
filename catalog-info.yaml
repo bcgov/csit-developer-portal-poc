@@ -1,13 +1,13 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: developer-portal
-  description: A portal for the BC Government developer community.
+  name: csit-developer-portal-poc
+  description: A proof of concept toolkit for the BC Government developer community, based on the existing DevHub.
   annotations:
-    github.com/project-slug: bcgov/developer-portal
-    github.com/team-slug: bcgov/teams/exchange-lab-developer-portal-team
+    github.com/project-slug: bcgov/csit-developer-portal-poc
+    github.com/team-slug: bcgov/teams/databc-aps
   #   backstage.io/techdocs-ref: dir:.
 spec:
   type: website
-  owner: group:exchange-lab-developer-portal-team
+  owner: group:databc-aps
   lifecycle: experimental
