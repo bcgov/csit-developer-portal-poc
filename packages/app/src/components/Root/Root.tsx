@@ -31,16 +31,18 @@ import {
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import LibraryAddIcon from '@material-ui/icons/LibraryAdd';
+import PaletteIcon from '@material-ui/icons/Palette';
 import { CustomSearchModal } from '../search/CustomModal';
 import { configApiRef, useApi } from '@backstage/core-plugin-api';
-
-const storedTheme = localStorage.getItem('theme');
+import { ThemeSwitcher } from './ThemeSwitcher';
 
 // Set the default theme to custom DevEx theme if no stored preference is found
+const storedTheme = localStorage.getItem('theme');
 const defaultTheme = 'devex';
 const theme = storedTheme ?? defaultTheme;
 
-if (storedTheme !== theme) {
+// Always set the theme to ensure it's stored
+if (!storedTheme || storedTheme !== theme) {
   localStorage.setItem('theme', theme);
 }
 
@@ -167,6 +169,10 @@ export const Root = ({ children }: PropsWithChildren<{}>) => {
         <SidebarScrollWrapper>
           <SidebarItem icon={MapIcon} to="tech-radar" text="Tech Radar" />
         </SidebarScrollWrapper> */}
+        </SidebarGroup>
+        <SidebarDivider />
+        <SidebarGroup label="Theme" icon={<PaletteIcon />}>
+          <ThemeSwitcher />
         </SidebarGroup>
         <SidebarSpace />
         <SidebarGroup
