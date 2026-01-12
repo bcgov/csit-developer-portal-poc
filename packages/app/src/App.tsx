@@ -41,6 +41,7 @@ import { ProtectedPage } from './components/auth/ProtectedPage';
 import { CustomSignInPage } from './components/auth/CustomSignInPage';
 import { protectedRoutes, redirectRoutes } from './components/utils/routes';
 import { RequirePermission } from '@backstage/plugin-permission-react';
+import { DevhubDesignPluginDemoPage } from '@internal/plugin-devhub-design-plugin-demo';
 
 const github_auth_provider = {
   id: 'github-auth-provider',
@@ -170,6 +171,7 @@ const routes = (
         }
       />
     ))}
+    <Route path="/devhub-design-plugin-demo" element={<DevhubDesignPluginDemoPage />} />
   </FlatRoutes>
 );
 

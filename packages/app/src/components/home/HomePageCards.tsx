@@ -255,9 +255,9 @@ export const HomePageCards = () => {
           <CardButton to="docs">View all docs</CardButton>
         </Grid>
 
-        <Grid container spacing={4}>
+        <Grid container spacing={4} style={{ display: 'flex' }}>
           {docs.map(d => (
-            <Grid item key={d.key} sm={12} md={4} style={{ display: 'flex' }}>
+            <Grid item key={d.key} sm={12} md={4}>
               <Card classes={{ root: classes.card }}>
                 <CardMedia>
                   <ItemCardHeader
