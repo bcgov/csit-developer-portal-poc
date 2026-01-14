@@ -5,7 +5,7 @@
 [![CodeQL](https://github.com/bcgov/developer-portal/workflows/CodeQL/badge.svg)](https://github.com/bcgov/developer-portal/actions/workflows/github-code-scanning/codeql)
 [![Run Unit Tests](https://github.com/bcgov/developer-portal/actions/workflows/test.yaml/badge.svg)](https://github.com/bcgov/developer-portal/actions/workflows/test.yaml)
 
-This is the [developer portal for the Province of British Columbia](https://developer.gov.bc.ca) built using [Backstage](https://backstage.io).
+This is a proof of concept project for integrating the [developer portal](https://developer.gov.bc.ca) with custom plugin to support Connected Services for the Province of British Columbia.
 
 ## Local Development
 
@@ -19,12 +19,21 @@ This is the [developer portal for the Province of British Columbia](https://deve
   - Alternativley, [Postgres](https://www.postgresql.org) can be configured
     - Install [Postgres locally](https://www.postgresql.org/download/) or via [docker](https://hub.docker.com/_/postgres)
 - Create an `app-config.local.yaml` file based off of the [app-config.local.template.yaml](app-config.local.template.yaml) file.
-
+- Create a [GitHub personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+  - Go to [GitHub Settings → Developer settings → Personal access tokens → Tokens (classic)](https://github.com/settings/tokens)
+  - Click "Generate new token (classic)"
+  - Give it a descriptive name (e.g., "Backstage Package Access")
+  - Select the read:packages scope
+  - Give a lifespan of 90 days (or less)
+  - **Important**: Authorize the token for SSO with the `bcgov` organization after creating it
+  - Copy the token (you won't be able to see it again)
+  
 ### Running
 
 To run the project, use the following at the project's root directory
 
 ```
+$ export GITHUB_TOKEN=<your_github_token>
 $ yarn install
 $ yarn start
 ```
@@ -46,6 +55,12 @@ To run against a dev instance:
 ### Dockerfile
 
 Note: The dockerfile is based on the [Janus showcase project](https://github.com/janus-idp/backstage-showcase/)
+
+When using the Dockerfile, include `GITHUB_TOKEN` as a build argument:
+
+```
+$ docker build --file packages/app/Dockerfile --build-arg GITHUB_TOKEN=<your_github_token> -t developer-portal-poc .
+```
 
 ### Deployment
 
