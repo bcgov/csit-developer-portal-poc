@@ -6538,12 +6538,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bcgov/plugin-catalog-backend-module-bc-data-catalogue@npm:0.1.0-publish-plugin-aps-4016-6a766051":
-  version: 0.1.0-publish-plugin-aps-4016-6a766051
-  resolution: "@bcgov/plugin-catalog-backend-module-bc-data-catalogue@npm:0.1.0-publish-plugin-aps-4016-6a766051::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40bcgov%2Fplugin-catalog-backend-module-bc-data-catalogue%2F0.1.0-publish-plugin-aps-4016-6a766051%2F64bc847a25f02f29dbca2a219e18ecded1fe0921"
+"@bcgov/plugin-catalog-backend-module-bc-data-catalogue@npm:0.1.0":
+  version: 0.1.0
+  resolution: "@bcgov/plugin-catalog-backend-module-bc-data-catalogue@npm:0.1.0"
   dependencies:
     "@backstage/backend-plugin-api": "npm:^1.4.1"
-  checksum: 10c0/57e05c651dd3d9310093aa1aaa8017efbc1964faef8b7b31003b5751fe723b0c12bb76cb8bd8f74d98b6d744fe7d284e22eda5718e9c5439333d8b5061be10eb
+  checksum: 10c0/d723684c5860e689bafbe176c01685eba39f56d3ab5aad5ff3baed2fcaa96b45b9517002a130e443909e271f704499579cd2c2718b6141017d8fe7ebbff2e9df
   languageName: node
   linkType: hard
 
@@ -17283,7 +17283,7 @@ __metadata:
     "@backstage/plugin-search-backend-module-techdocs": "backstage:^"
     "@backstage/plugin-search-backend-node": "backstage:^"
     "@backstage/plugin-techdocs-backend": "backstage:^"
-    "@bcgov/plugin-catalog-backend-module-bc-data-catalogue": "npm:0.1.0-publish-plugin-aps-4016-6a766051"
+    "@bcgov/plugin-catalog-backend-module-bc-data-catalogue": "npm:0.1.0"
     "@roadiehq/scaffolder-backend-module-http-request": "npm:^4.3.5"
     "@roadiehq/scaffolder-backend-module-utils": "npm:^3.3.0"
     "@types/express": "npm:^4.17.6"
