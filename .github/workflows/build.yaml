@@ -5,7 +5,7 @@ name: Build Image
 
 env:
   REGISTRY: ghcr.io
-  REPOSITORY_NAME: ${{ github.repository_owner }}/developer-experience/developer-portal
+  REPOSITORY_NAME: ${{ github.repository }}
 
 on:
   workflow_call:
