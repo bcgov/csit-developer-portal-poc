@@ -17283,7 +17283,7 @@ __metadata:
     "@backstage/plugin-search-backend-module-techdocs": "backstage:^"
     "@backstage/plugin-search-backend-node": "backstage:^"
     "@backstage/plugin-techdocs-backend": "backstage:^"
-    "@bcgov/plugin-catalog-backend-module-bc-data-catalogue": "npm:0.1.0-aps-4079-publish-npmjs-e4e0ded3"
+    "@bcgov/plugin-catalog-backend-module-bc-data-catalogue": "npm:0.1.0-publish-plugin-aps-4016-6a766051"
     "@roadiehq/scaffolder-backend-module-http-request": "npm:^4.3.5"
     "@roadiehq/scaffolder-backend-module-utils": "npm:^3.3.0"
     "@types/express": "npm:^4.17.6"
