@@ -53,5 +53,5 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           cache-from: type=registry,ref=${{ env.REGISTRY }}/${{ env.REPOSITORY_NAME }}:${{ env.CACHE_TAG }}
           cache-to: type=registry,ref=${{ env.REGISTRY }}/${{ env.REPOSITORY_NAME }}:${{ env.CACHE_TAG }},mode=max
-          build-args: |
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          secrets: |
+            GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
