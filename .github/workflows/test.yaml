@@ -39,7 +39,9 @@ jobs:
 
       - name: Install Dependencies
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
+          # Disable hardened mode so Yarn uses the lockfile's __archiveUrl
+          YARN_ENABLE_HARDENED_MODE: 0
         run: ./.yarn/releases/yarn-4.4.1.cjs install --immutable
 
       - name: Run Unit Tests
