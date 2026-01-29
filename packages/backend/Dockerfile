@@ -27,7 +27,9 @@ COPY $EXTERNAL_SOURCE/packages/app/package.json ./packages/app/package.json
 COPY $EXTERNAL_SOURCE/packages/backend/package.json ./packages/backend/package.json
 COPY $EXTERNAL_SOURCE/plugins/ ./plugins/
 
-RUN "$YARN" install --immutable
+RUN --mount=type=secret,id=GITHUB_TOKEN \
+    export GITHUB_TOKEN=$(cat /run/secrets/GITHUB_TOKEN) && \
+    "$YARN" install --immutable
 
 # Stage 3 - Build packages
 FROM deps AS build
@@ -55,7 +57,9 @@ COPY $EXTERNAL_SOURCE/app-config.yaml  \
   $EXTERNAL_SOURCE/catalog-info.yaml ./
 
 # Install production dependencies
-RUN "$YARN" workspaces focus --all --production && "$YARN" cache clean
+RUN --mount=type=secret,id=GITHUB_TOKEN \
+    export GITHUB_TOKEN=$(cat /run/secrets/GITHUB_TOKEN) && \
+    "$YARN" workspaces focus --all --production && "$YARN" cache clean
 
 # Stage 5 - Build the runner image
 FROM registry.access.redhat.com/ubi9/nodejs-20-minimal:9.6-1750862880 AS runner
