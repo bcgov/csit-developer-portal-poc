@@ -174,8 +174,10 @@ techdocs:
 catalog:
   useUrlReadersSearch: true
   providers:
-    bc-data-catalogue-apis:
+    bc-data-catalogue:
       env: dev
+      schedule: 
+        frequency: 120m
     # githubOrg:
     #   - id: production
     #     githubUrl: 'https://github.com'
