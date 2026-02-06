@@ -31,7 +31,7 @@ import {
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import LibraryAddIcon from '@material-ui/icons/LibraryAdd';
-import PaletteIcon from '@material-ui/icons/Palette';
+import HandymanIcon from '@mui/icons-material/Handyman';
 import { CustomSearchModal } from '../search/CustomModal';
 import { configApiRef, useApi } from '@backstage/core-plugin-api';
 import { ThemeSwitcher } from './ThemeSwitcher';
@@ -48,7 +48,7 @@ if (!storedTheme || storedTheme !== theme) {
 
 // Similarly, default the sidebar pinned state to false if no stored pref is found
 if (!localStorage.getItem('sidebarPinState')) {
-  localStorage.setItem('sidebarPinState', 'false');
+  localStorage.setItem('sidebarPinState', 'true');
 }
 
 const useSidebarLogoStyles = makeStyles({
@@ -74,6 +74,18 @@ const useSidebarLogoStyles = makeStyles({
   },
 });
 
+const useSidebarStyles = makeStyles({
+  sidebarGroup: {
+    '& .MuiTypography-root': {
+      whiteSpace: 'normal !important',
+      wordBreak: 'break-word',
+      overflow: 'visible !important',
+      textOverflow: 'clip !important',
+      maxWidth: 'none !important',
+    },
+  },
+});
+
 const SidebarLogo = () => {
   const classes = useSidebarLogoStyles();
   const { isOpen } = useSidebarOpenState();
@@ -95,6 +107,7 @@ const SidebarLogo = () => {
 export const Root = ({ children }: PropsWithChildren<{}>) => {
   const { state, toggleModal } = useSearchModal();
   const config = useApi(configApiRef);
+  const classes = useSidebarStyles();
   const wizardsEnabled =
     config.getOptionalConfig('app.wizards') &&
     config.getBoolean('app.wizards.enabled');
@@ -171,15 +184,18 @@ export const Root = ({ children }: PropsWithChildren<{}>) => {
         </SidebarScrollWrapper> */}
         </SidebarGroup>
         <SidebarDivider />
-        <SidebarGroup label="Theme" icon={<PaletteIcon />}>
-          <ThemeSwitcher />
-        </SidebarGroup>
+        <div className={classes.sidebarGroup}>
+          <SidebarGroup label="Integration Toolkit" icon={<HandymanIcon />}>
+            <SidebarItem icon={HandymanIcon} to="csit-landing-page" text="Integration Toolkit" />
+          </SidebarGroup>
+        </div>
         <SidebarSpace />
         <SidebarGroup
           label="Settings"
           icon={<UserSettingsSignInAvatar />}
           to="/settings"
         >
+          <ThemeSwitcher />
           <SidebarSettings />
         </SidebarGroup>
       </Sidebar>

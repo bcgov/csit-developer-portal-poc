@@ -1,1 +1,1 @@
-export { devhubDesignPluginDemoPlugin, DevhubDesignPluginDemoPage } from './plugin';
+export { devhubDesignPluginDemoPlugin, DevhubDesignPluginDemoPage, CsitLandingPage } from './plugin';
