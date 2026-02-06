@@ -8428,9 +8428,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@internal/plugin-devhub-design-plugin-demo@workspace:^, @internal/plugin-devhub-design-plugin-demo@workspace:plugins/devhub-design-plugin-demo":
+"@internal/plugin-integration-toolkit@workspace:^, @internal/plugin-integration-toolkit@workspace:plugins/integration-toolkit":
   version: 0.0.0-use.local
-  resolution: "@internal/plugin-devhub-design-plugin-demo@workspace:plugins/devhub-design-plugin-demo"
+  resolution: "@internal/plugin-integration-toolkit@workspace:plugins/integration-toolkit"
   dependencies:
     "@backstage/cli": "npm:^0.33.0"
     "@backstage/core-app-api": "npm:^1.18.0"
@@ -16532,7 +16532,7 @@ __metadata:
     "@backstage/theme": "backstage:^"
     "@bcgov/bc-sans": "npm:^2.0.0"
     "@bcgov/design-tokens": "npm:^3.0.0"
-    "@internal/plugin-devhub-design-plugin-demo": "workspace:^"
+    "@internal/plugin-integration-toolkit": "workspace:^"
     "@material-ui/core": "npm:^4.12.4"
     "@material-ui/icons": "npm:^4.11.3"
     "@material-ui/lab": "npm:^4.0.0-alpha.61"

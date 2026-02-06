@@ -186,7 +186,7 @@ export const Root = ({ children }: PropsWithChildren<{}>) => {
         <SidebarDivider />
         <div className={classes.sidebarGroup}>
           <SidebarGroup label="Integration Toolkit" icon={<HandymanIcon />}>
-            <SidebarItem icon={HandymanIcon} to="csit-landing-page" text="Integration Toolkit" />
+            <SidebarItem icon={HandymanIcon} to="integration-toolkit" text="Integration Toolkit" />
           </SidebarGroup>
         </div>
         <SidebarSpace />
