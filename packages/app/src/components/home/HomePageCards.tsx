@@ -24,6 +24,8 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { Link } from 'react-router-dom';
 import DocsIcon from '@material-ui/icons/Description';
 import EventIcon from '@material-ui/icons/Event';
+import ApiIcon from '@mui/icons-material/Api';
+import StorageIcon from '@mui/icons-material/Storage';
 import { BCGovHeaderText } from './HomeHeaderText';
 import * as tokens from '@bcgov/design-tokens/js';
 
@@ -107,6 +109,7 @@ const useStyles = makeStyles(theme => ({
     flex: 1,
     justifyContent: 'space-between',
     flexDirection: 'column',
+    height: '100%',
     '&:hover': {
       background:
         theme.palette.type === 'dark'
@@ -117,6 +120,12 @@ const useStyles = makeStyles(theme => ({
   cardHeader: {
     backgroundImage: 'none',
     paddingBottom: tokens.layoutPaddingNone,
+  },
+  gridItem: {
+    display: 'flex',
+  },
+  cardContent: {
+    flexGrow: 1,
   },
   background: {
     padding: `0px calc(9% + ${tokens.layoutPaddingLarge}) ${tokens.layoutMarginXxxlarge}`,
@@ -164,6 +173,25 @@ export const HomePageCards = () => {
       icon: <DocsIcon />,
       buttonText: 'Explore the Public cloud docs',
       desc: 'Learn about building and deploying applications through B.C. government AWS landing zone.',
+    },
+  ];
+
+  const actions = [
+    {
+      key: 'a1',
+      url: '/api-docs',
+      label: 'Browse APIs',
+      icon: <ApiIcon />,
+      buttonText: 'Explore APIs',
+      desc: 'Discover and connect with powerful government APIs designed to jumpstart your development projects.',
+    },
+    {
+      key: 'a2',
+      url: '/catalog',
+      label: 'Find data',
+      icon: <StorageIcon />,
+      buttonText: 'Discover government data',
+      desc: 'Access government datasets and resources to drive your solutions.',
     },
   ];
 
@@ -250,6 +278,42 @@ export const HomePageCards = () => {
       <div className={classes.cardGroup}>
         <Grid container spacing={0} justifyContent="space-between">
           <BCGovHeaderText variant="h3" paragraph>
+            Service catalogue
+          </BCGovHeaderText>
+        </Grid>
+
+        <Grid container spacing={4} style={{ display: 'flex' }}>
+          {actions.map(a => (
+            <Grid item key={a.key} sm={12} md={4} className={classes.gridItem}>
+              <Card classes={{ root: classes.card }}>
+                <CardMedia>
+                  <ItemCardHeader
+                    classes={{ root: classes.cardHeader }}
+                    title={
+                      <CardTitle
+                        linkProps={{ to: a.url, title: a.label }}
+                        icon={a.icon}
+                      >
+                        {a.label}
+                      </CardTitle>
+                    }
+                  />
+                </CardMedia>
+                <CardContent className={classes.cardContent}>{a.desc}</CardContent>
+                <CardActions>
+                  <CardButton to={a.url} title={a.label}>
+                    {a.buttonText}
+                  </CardButton>
+                </CardActions>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </div>
+
+      <div className={classes.cardGroup}>
+        <Grid container spacing={0} justifyContent="space-between">
+          <BCGovHeaderText variant="h3" paragraph>
             Documentation library
           </BCGovHeaderText>
           <CardButton to="docs">View all docs</CardButton>
@@ -257,7 +321,7 @@ export const HomePageCards = () => {
 
         <Grid container spacing={4} style={{ display: 'flex' }}>
           {docs.map(d => (
-            <Grid item key={d.key} sm={12} md={4}>
+            <Grid item key={d.key} sm={12} md={4} className={classes.gridItem}>
               <Card classes={{ root: classes.card }}>
                 <CardMedia>
                   <ItemCardHeader
@@ -272,7 +336,7 @@ export const HomePageCards = () => {
                     }
                   />
                 </CardMedia>
-                <CardContent>{d.desc}</CardContent>
+                <CardContent className={classes.cardContent}>{d.desc}</CardContent>
                 <CardActions>
                   <CardButton to={d.url} title={d.label}>
                     {d.buttonText}
