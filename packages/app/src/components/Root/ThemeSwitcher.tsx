@@ -9,12 +9,15 @@ import {
 
 const useStyles = makeStyles((theme: Theme) => ({
   formControl: {
-    width: '100%',
+    width: 'auto',
     margin: '0 8px',
+    minWidth: 'fit-content',
   },
   select: {
     color: theme.palette.navigation.color,
     fontSize: '0.875rem',
+    paddingRight: '24px !important',
+    paddingLeft: '8px',
     '&:before': {
       borderColor: 'inherit',
     },
@@ -52,7 +55,7 @@ export const ThemeSwitcher = () => {
   };
 
   return (
-    <FormControl className={classes.formControl} size="small" fullWidth>
+    <FormControl className={classes.formControl} size="small">
       <Select
         value={currentTheme}
         onChange={handleThemeChange}
