@@ -179,7 +179,7 @@ export const HomePageCards = () => {
   const actions = [
     {
       key: 'a0',
-      url: '/docs',
+      url: '/docs/default/component/connected-services-techdocs/getting-started/',
       label: 'Getting started guide',
       icon: <DocsIcon />,
       buttonText: 'Start integrating',
