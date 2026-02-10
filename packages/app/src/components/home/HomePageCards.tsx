@@ -178,6 +178,14 @@ export const HomePageCards = () => {
 
   const actions = [
     {
+      key: 'a0',
+      url: '/docs',
+      label: 'Getting started guide',
+      icon: <DocsIcon />,
+      buttonText: 'Start integrating',
+      desc: 'Learn how to build with Connected Services.',
+    },
+    {
       key: 'a1',
       url: '/api-docs',
       label: 'Browse APIs',
@@ -278,7 +286,7 @@ export const HomePageCards = () => {
       <div className={classes.cardGroup}>
         <Grid container spacing={0} justifyContent="space-between">
           <BCGovHeaderText variant="h3" paragraph>
-            Service catalogue
+            Connected Services
           </BCGovHeaderText>
         </Grid>
 

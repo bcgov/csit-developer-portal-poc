@@ -26,6 +26,7 @@ import {
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import ScheduleIcon from '@material-ui/icons/Schedule';
+import DocsIcon from '@material-ui/icons/Description';
 import { Link } from 'react-router-dom';
 import ApiIcon from '@mui/icons-material/Api';
 import StorageIcon from '@mui/icons-material/Storage';
@@ -185,6 +186,14 @@ export const HomePageCards = () => {
 
   const actions = [
     {
+      key: 'a0',
+      url: '/docs',
+      label: 'Getting started guide',
+      icon: <DocsIcon />,
+      buttonText: 'Start integrating',
+      desc: 'Learn how to build with Connected Services.',
+    },
+    {
       key: 'a1',
       url: '/api-docs',
       label: 'Browse APIs',
@@ -274,7 +283,7 @@ export const HomePageCards = () => {
         <div className={classes.cardGroup}>
           <Grid container spacing={0} justifyContent="space-between">
             <BCGovHeaderText variant="h3" paragraph>
-              Service catalogue
+              Connected Services
             </BCGovHeaderText>
             {/* <CardButton to="docs">View all docs</CardButton> */}
           </Grid>
