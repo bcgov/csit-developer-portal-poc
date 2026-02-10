@@ -42,6 +42,7 @@ import { CustomSignInPage } from './components/auth/CustomSignInPage';
 import { protectedRoutes, redirectRoutes } from './components/utils/routes';
 import { RequirePermission } from '@backstage/plugin-permission-react';
 import { CsitLandingPage } from '@internal/plugin-integration-toolkit';
+import { PrefilteredCatalogPage } from './components/PrefilteredCatalogPage';
 
 const github_auth_provider = {
   id: 'github-auth-provider',
@@ -172,6 +173,26 @@ const routes = (
       />
     ))}
     <Route path="/integration-toolkit" element={<CsitLandingPage />} />
+
+    <Route
+      path="/catalog/sdx"
+      element={<PrefilteredCatalogPage title="APIs using SDX" initialTags={['secure-data-exchange']} initialKind="api" />}
+    />
+
+    <Route
+      path="/catalog/authoritative"
+      element={<PrefilteredCatalogPage title="Authoritative Data sources" initialTags={['authoritative-data-register']} initialKind="api" />}
+    />
+
+    <Route
+      path="/catalog/efv"
+      element={<PrefilteredCatalogPage title="Available EFVs" initialTags={['eligibility-factor-verification']} initialKind="api" />}
+    />
+
+    <Route
+      path="/catalog/datasets-apis"
+      element={<PrefilteredCatalogPage title="Dataset and API Catalogues" initialTags={['authoritative-data']} initialKind="api" />}
+    />
   </FlatRoutes>
 );
 
