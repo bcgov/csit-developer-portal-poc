@@ -72,3 +72,8 @@ catalog:
       target: https://github.com/bcgov/developer-experience-team/blob/main/developer-portal/catalog/templates-seed-dev.yml
       rules:
         - allow: [Template]
+    - type: url
+      # target: https://github.com/bcgov/csit-connected-services-techdocs/blob/main/catalog-info.yaml
+      target: https://github.com/bcgov/csit-connected-services-techdocs/blob/remove-git-revision-date-localized/catalog-info.yaml
+      rules:
+        - allow: [Component]
