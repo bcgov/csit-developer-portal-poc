@@ -41,6 +41,7 @@ import { ProtectedPage } from './components/auth/ProtectedPage';
 import { CustomSignInPage } from './components/auth/CustomSignInPage';
 import { protectedRoutes, redirectRoutes } from './components/utils/routes';
 import { RequirePermission } from '@backstage/plugin-permission-react';
+import { CsitLandingPage } from '@internal/plugin-integration-toolkit';
 
 const github_auth_provider = {
   id: 'github-auth-provider',
@@ -170,6 +171,7 @@ const routes = (
         }
       />
     ))}
+    <Route path="/integration-toolkit" element={<CsitLandingPage />} />
   </FlatRoutes>
 );
 

@@ -31,22 +31,24 @@ import {
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import LibraryAddIcon from '@material-ui/icons/LibraryAdd';
+import HandymanIcon from '@mui/icons-material/Handyman';
 import { CustomSearchModal } from '../search/CustomModal';
 import { configApiRef, useApi } from '@backstage/core-plugin-api';
-
-const storedTheme = localStorage.getItem('theme');
+import { ThemeSwitcher } from './ThemeSwitcher';
 
 // Set the default theme to custom DevEx theme if no stored preference is found
+const storedTheme = localStorage.getItem('theme');
 const defaultTheme = 'devex';
 const theme = storedTheme ?? defaultTheme;
 
-if (storedTheme !== theme) {
+// Always set the theme to ensure it's stored
+if (!storedTheme || storedTheme !== theme) {
   localStorage.setItem('theme', theme);
 }
 
 // Similarly, default the sidebar pinned state to false if no stored pref is found
 if (!localStorage.getItem('sidebarPinState')) {
-  localStorage.setItem('sidebarPinState', 'false');
+  localStorage.setItem('sidebarPinState', 'true');
 }
 
 const useSidebarLogoStyles = makeStyles({
@@ -72,6 +74,18 @@ const useSidebarLogoStyles = makeStyles({
   },
 });
 
+const useSidebarStyles = makeStyles({
+  sidebarGroup: {
+    '& .MuiTypography-root': {
+      whiteSpace: 'normal !important',
+      wordBreak: 'break-word',
+      overflow: 'visible !important',
+      textOverflow: 'clip !important',
+      maxWidth: 'none !important',
+    },
+  },
+});
+
 const SidebarLogo = () => {
   const classes = useSidebarLogoStyles();
   const { isOpen } = useSidebarOpenState();
@@ -93,6 +107,7 @@ const SidebarLogo = () => {
 export const Root = ({ children }: PropsWithChildren<{}>) => {
   const { state, toggleModal } = useSearchModal();
   const config = useApi(configApiRef);
+  const classes = useSidebarStyles();
   const wizardsEnabled =
     config.getOptionalConfig('app.wizards') &&
     config.getBoolean('app.wizards.enabled');
@@ -168,12 +183,19 @@ export const Root = ({ children }: PropsWithChildren<{}>) => {
           <SidebarItem icon={MapIcon} to="tech-radar" text="Tech Radar" />
         </SidebarScrollWrapper> */}
         </SidebarGroup>
+        {/* <SidebarDivider />
+        <div className={classes.sidebarGroup}>
+          <SidebarGroup label="Integration Toolkit" icon={<HandymanIcon />}>
+            <SidebarItem icon={HandymanIcon} to="integration-toolkit" text="Integration Toolkit" />
+          </SidebarGroup>
+        </div> */}
         <SidebarSpace />
         <SidebarGroup
           label="Settings"
           icon={<UserSettingsSignInAvatar />}
           to="/settings"
         >
+          <ThemeSwitcher />
           <SidebarSettings />
         </SidebarGroup>
       </Sidebar>
