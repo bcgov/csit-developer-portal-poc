@@ -82,7 +82,7 @@ COPY --from=cleanup --chown=1001:1001 $CONTAINER_SOURCE/ ./
 # The fix-permissions script is important when operating in environments that dynamically use a random UID at runtime, such as OpenShift.
 # The upstream backstage image does not account for this and it causes the container to fail at runtime.
 
-# RUN fix-permissions ./
+RUN fix-permissions ./
 # Switch to nodejs user
 USER 1001
 ENV NODE_OPTIONS=--no-node-snapshot
