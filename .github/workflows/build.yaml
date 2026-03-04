@@ -9,12 +9,6 @@ env:
 
 on:
   workflow_dispatch:
-    inputs:
-      tag:
-        description: 'Additional tag to apply (optional)'
-        required: false
-        default: ''
-        type: string
   workflow_call:
 
 jobs:
