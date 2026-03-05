@@ -8,7 +8,6 @@ RUN dnf install -y -q --allowerasing --nobest \
   python3 gcc gcc-c++ zlib-devel brotli-devel openssl-devel && \
   dnf update -y && dnf clean all
 
-
 # Env vars
 ENV YARN=./.yarn/releases/yarn-4.4.1.cjs
 ENV EXTERNAL_SOURCE=.
@@ -55,6 +54,7 @@ RUN tar xzf bundle.tar.gz && rm bundle.tar.gz
 COPY $EXTERNAL_SOURCE/app-config.yaml  \
   $EXTERNAL_SOURCE/app-config.production.yaml \
   $EXTERNAL_SOURCE/catalog-info.yaml ./
+COPY $EXTERNAL_SOURCE/app-config.demo.yaml* ./
 
 # Install production dependencies
 RUN --mount=type=secret,id=GITHUB_TOKEN \
@@ -64,6 +64,13 @@ RUN --mount=type=secret,id=GITHUB_TOKEN \
 # Stage 5 - Build the runner image
 FROM registry.access.redhat.com/ubi9/nodejs-20-minimal:9.6-1750862880 AS runner
 USER 0
+
+# Install Python + pip in the final image (to support TechDocs local build)
+RUN microdnf install -y python3 python3-pip \
+    && microdnf clean all
+
+# Install MkDocs + TechDocs core (brings mkdocs-material etc. for TechDocs local build)
+RUN pip3 install --no-cache-dir "mkdocs-techdocs-core==1.*"
 
 # Env vars
 ENV YARN=./.yarn/releases/yarn-4.4.1.cjs

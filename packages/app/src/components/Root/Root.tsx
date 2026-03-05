@@ -31,7 +31,7 @@ import {
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import LibraryAddIcon from '@material-ui/icons/LibraryAdd';
-import HandymanIcon from '@mui/icons-material/Handyman';
+// import HandymanIcon from '@mui/icons-material/Handyman';
 import { CustomSearchModal } from '../search/CustomModal';
 import { configApiRef, useApi } from '@backstage/core-plugin-api';
 import { ThemeSwitcher } from './ThemeSwitcher';
@@ -74,17 +74,17 @@ const useSidebarLogoStyles = makeStyles({
   },
 });
 
-const useSidebarStyles = makeStyles({
-  sidebarGroup: {
-    '& .MuiTypography-root': {
-      whiteSpace: 'normal !important',
-      wordBreak: 'break-word',
-      overflow: 'visible !important',
-      textOverflow: 'clip !important',
-      maxWidth: 'none !important',
-    },
-  },
-});
+// const useSidebarStyles = makeStyles({
+//   sidebarGroup: {
+//     '& .MuiTypography-root': {
+//       whiteSpace: 'normal !important',
+//       wordBreak: 'break-word',
+//       overflow: 'visible !important',
+//       textOverflow: 'clip !important',
+//       maxWidth: 'none !important',
+//     },
+//   },
+// });
 
 const SidebarLogo = () => {
   const classes = useSidebarLogoStyles();
@@ -107,7 +107,7 @@ const SidebarLogo = () => {
 export const Root = ({ children }: PropsWithChildren<{}>) => {
   const { state, toggleModal } = useSearchModal();
   const config = useApi(configApiRef);
-  const classes = useSidebarStyles();
+  // const classes = useSidebarStyles();
   const wizardsEnabled =
     config.getOptionalConfig('app.wizards') &&
     config.getBoolean('app.wizards.enabled');

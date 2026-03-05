@@ -1,5 +1,5 @@
 # Builds the docker image.
-# Note: This workflow is expected to be called by other workflows and not run on its own
+# Can be triggered manually or called by other workflows.
 
 name: Build Image
 
@@ -8,6 +8,7 @@ env:
   REPOSITORY_NAME: ${{ github.repository }}
 
 on:
+  workflow_dispatch:
   workflow_call:
 
 jobs:
