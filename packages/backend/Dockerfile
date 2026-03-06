@@ -70,7 +70,7 @@ RUN microdnf install -y python3 python3-pip \
     && microdnf clean all
 
 # Install MkDocs + TechDocs core (brings mkdocs-material etc. for TechDocs local build)
-RUN pip3 install --no-cache-dir "mkdocs-techdocs-core==1.*"
+RUN pip3 install --no-cache-dir "mkdocs-techdocs-core==1.*" "mkpatcher" "mkdocs-git-revision-date-localized-plugin"
 
 # Env vars
 ENV YARN=./.yarn/releases/yarn-4.4.1.cjs
