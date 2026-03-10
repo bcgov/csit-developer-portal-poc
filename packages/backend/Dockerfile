@@ -65,12 +65,10 @@ RUN --mount=type=secret,id=GITHUB_TOKEN \
 FROM registry.access.redhat.com/ubi9/nodejs-20-minimal:9.6-1750862880 AS runner
 USER 0
 
-# Install Python + pip in the final image (to support TechDocs local build)
-RUN microdnf install -y python3 python3-pip \
+# Install dependencies to support TechDocs local build
+RUN microdnf install -y python3 python3-pip git \
     && microdnf clean all
-
-# Install MkDocs + TechDocs core (brings mkdocs-material etc. for TechDocs local build)
-RUN pip3 install --no-cache-dir "mkdocs-techdocs-core==1.*"
+RUN pip3 install --no-cache-dir "mkdocs-techdocs-core==1.*" "mkpatcher" "mkdocs-git-revision-date-localized-plugin" "mkdocs-ezlinks-plugin"
 
 # Env vars
 ENV YARN=./.yarn/releases/yarn-4.4.1.cjs

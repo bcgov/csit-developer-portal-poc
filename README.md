@@ -70,7 +70,18 @@ $ docker buildx build \
 
 ### Deployment
 
-See the [gitops repo](https://github.com/bcgov-c/tenant-gitops-f5ff48).
+A demonstration deployment is live at https://csit-backstage-apps-gov-bc-ca.dev.api.gov.bc.ca/.
+
+This deployment uses `app-config.demo.yaml` in place of `app-config.production.yaml`.
+
+To update this deployment:
+
+- build a new image by running a workflow dispatch of the [build
+  action](https://github.com/bcgov/csit-developer-portal-poc/actions/workflows/build.yaml)
+  on the desired branch
+- update the version tag in the APS infra repo
+
+<!-- See the [gitops repo](https://github.com/bcgov-c/tenant-gitops-f5ff48). -->
 
 ### More information
 
