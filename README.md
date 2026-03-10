@@ -76,8 +76,9 @@ This deployment uses `app-config.demo.yaml` in place of `app-config.production.y
 
 To update this deployment:
 
-- run a workflow dispatch on the desired branch via
-  https://github.com/bcgov/csit-developer-portal-poc/actions/workflows/build.yaml
+- build a new image by running a workflow dispatch of the [build
+  action](https://github.com/bcgov/csit-developer-portal-poc/actions/workflows/build.yaml)
+  on the desired branch
 - update the version tag in the APS infra repo
 
 <!-- See the [gitops repo](https://github.com/bcgov-c/tenant-gitops-f5ff48). -->
