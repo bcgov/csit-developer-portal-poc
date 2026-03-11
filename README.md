@@ -70,7 +70,7 @@ $ docker buildx build \
 
 ### Deployment
 
-A demonstration deployment is live at https://csit-backstage-apps-gov-bc-ca.dev.api.gov.bc.ca/.
+A demonstration deployment is live at https://csit-devhub-apps-gov-bc-ca.dev.api.gov.bc.ca/.
 
 This deployment uses `app-config.demo.yaml` in place of `app-config.production.yaml`.
 
