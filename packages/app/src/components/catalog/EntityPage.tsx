@@ -59,6 +59,7 @@ import { ReportIssue } from '@backstage/plugin-techdocs-module-addons-contrib';
 import { Mermaid } from 'backstage-plugin-techdocs-addon-mermaid';
 
 import { EntitySecurityInsightsContent } from '@roadiehq/backstage-plugin-security-insights';
+import { CatalogDatasetPage } from '@bcgov/plugin-catalog-dataset';
 
 const techdocsContent = (
   <EntityTechdocsContent>
@@ -415,6 +416,7 @@ export const entityPage = (
     <EntitySwitch.Case if={isKind('user')} children={userPage} />
     <EntitySwitch.Case if={isKind('system')} children={systemPage} />
     <EntitySwitch.Case if={isKind('domain')} children={domainPage} />
+    <EntitySwitch.Case if={isKind('dataset')} children={<CatalogDatasetPage />} />
 
     <EntitySwitch.Case>{defaultEntityPage}</EntitySwitch.Case>
   </EntitySwitch>

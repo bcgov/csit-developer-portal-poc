@@ -195,7 +195,7 @@ export const HomePageCards = () => {
     },
     {
       key: 'a2',
-      url: '/catalog',
+      url: '/catalog?filters[kind]=dataset',
       label: 'Find data',
       icon: <StorageIcon />,
       buttonText: 'Discover government data',
