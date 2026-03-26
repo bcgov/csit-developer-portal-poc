@@ -6734,39 +6734,39 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bcgov/plugin-catalog-backend-module-bc-data-catalogue@npm:0.2.5-feature.dataset-prototype.a27cfa2c":
-  version: 0.2.5-feature.dataset-prototype.a27cfa2c
-  resolution: "@bcgov/plugin-catalog-backend-module-bc-data-catalogue@npm:0.2.5-feature.dataset-prototype.a27cfa2c::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40bcgov%2Fplugin-catalog-backend-module-bc-data-catalogue%2F0.2.5-feature.dataset-prototype.a27cfa2c%2F43e0c448dac44152b28d08448b0abdc3b47c6540"
+"@bcgov/plugin-catalog-backend-module-bc-data-catalogue@npm:0.2.5-feature.dataset-prototype.4a5f3de2":
+  version: 0.2.5-feature.dataset-prototype.4a5f3de2
+  resolution: "@bcgov/plugin-catalog-backend-module-bc-data-catalogue@npm:0.2.5-feature.dataset-prototype.4a5f3de2::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40bcgov%2Fplugin-catalog-backend-module-bc-data-catalogue%2F0.2.5-feature.dataset-prototype.4a5f3de2%2F90f1180c1e9bd85f6d95a167902a1c1aa3bdf926"
   dependencies:
     "@backstage/backend-plugin-api": "npm:^1.4.1"
     "@backstage/config": "npm:^1.3.2"
-    "@bcgov/plugin-catalog-common-bc-data-catalogue": "npm:0.2.5-feature.dataset-prototype.a27cfa2c"
-  checksum: 10c0/db287c5f3c1d4637077910481902aa246bf826a1ede13ca0163e86e3937d5e6868b4860ef4c85ec814dfed0d60bfaf36f79182fdf99a0af08d25eaf06ce498dd
+    "@bcgov/plugin-catalog-common-bc-data-catalogue": "npm:0.2.5-feature.dataset-prototype.4a5f3de2"
+  checksum: 10c0/3a8e8a2c989856dad7e211c791af4ee19201e021a325b05063ceeb2d626b49bc79ad382b99f990cf9346cc14dd5eb474b58ae952180515d47180fd678b44c7f5
   languageName: node
   linkType: hard
 
-"@bcgov/plugin-catalog-common-bc-data-catalogue@npm:0.2.5-feature.dataset-prototype.a27cfa2c":
-  version: 0.2.5-feature.dataset-prototype.a27cfa2c
-  resolution: "@bcgov/plugin-catalog-common-bc-data-catalogue@npm:0.2.5-feature.dataset-prototype.a27cfa2c::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40bcgov%2Fplugin-catalog-common-bc-data-catalogue%2F0.2.5-feature.dataset-prototype.a27cfa2c%2Fec3ff040ceb1c4daa1befd6d9c256b3c78e1088f"
-  checksum: 10c0/92c1f90b484ddb1967e5ba78bcbadaffafc9b6fbe2004f7e3be5c400ea7638f735167d7da785e79c8aa60c704b68a64eb930e95e8ba54a8943971e57ae6a12ba
+"@bcgov/plugin-catalog-common-bc-data-catalogue@npm:0.2.5-feature.dataset-prototype.4a5f3de2":
+  version: 0.2.5-feature.dataset-prototype.4a5f3de2
+  resolution: "@bcgov/plugin-catalog-common-bc-data-catalogue@npm:0.2.5-feature.dataset-prototype.4a5f3de2::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40bcgov%2Fplugin-catalog-common-bc-data-catalogue%2F0.2.5-feature.dataset-prototype.4a5f3de2%2F403d036cfc6cf3f03685f654f3b2fe21858e371f"
+  checksum: 10c0/a6df6ac647e27cec09ed39bdfba10a2c968ff639154d30c407ed73f0d6e07536583bdd451e24d93bef9b986e0eb6d1f7cb329f7b2d7e786447a773cf99a1883f
   languageName: node
   linkType: hard
 
-"@bcgov/plugin-catalog-dataset@npm:0.2.5-feature.dataset-prototype.a27cfa2c":
-  version: 0.2.5-feature.dataset-prototype.a27cfa2c
-  resolution: "@bcgov/plugin-catalog-dataset@npm:0.2.5-feature.dataset-prototype.a27cfa2c::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40bcgov%2Fplugin-catalog-dataset%2F0.2.5-feature.dataset-prototype.a27cfa2c%2Feb2aad46e85e354730a20ce10b226ca727d9ced2"
+"@bcgov/plugin-catalog-dataset@npm:0.2.5-feature.dataset-prototype.4a5f3de2":
+  version: 0.2.5-feature.dataset-prototype.4a5f3de2
+  resolution: "@bcgov/plugin-catalog-dataset@npm:0.2.5-feature.dataset-prototype.4a5f3de2::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40bcgov%2Fplugin-catalog-dataset%2F0.2.5-feature.dataset-prototype.4a5f3de2%2F4c7c0b31173f8a26ac4aa9394e3cb2e46bfef96a"
   dependencies:
     "@backstage/core-components": "npm:^0.17.3"
     "@backstage/core-plugin-api": "npm:^1.10.9"
     "@backstage/theme": "npm:^0.6.6"
-    "@bcgov/plugin-catalog-common-bc-data-catalogue": "npm:0.2.5-feature.dataset-prototype.a27cfa2c"
+    "@bcgov/plugin-catalog-common-bc-data-catalogue": "npm:0.2.5-feature.dataset-prototype.4a5f3de2"
     "@material-ui/core": "npm:^4.9.13"
     "@material-ui/icons": "npm:^4.9.1"
     "@material-ui/lab": "npm:^4.0.0-alpha.61"
     react-use: "npm:^17.2.4"
   peerDependencies:
     react: ^16.13.1 || ^17.0.0 || ^18.0.0
-  checksum: 10c0/7cfe7852c9de0b001c65eea2d19d1b4e04c895e109c0e7245b989935e0a8fc09a0b76d019d87d43b0ef99888cc0af0398f7532f83b0e14a9f5538fcc54855e16
+  checksum: 10c0/f57359ce8efa48d09a26c04400027ef39937371c527ccc46c5cf1cacc224757b0fc6802c8b10f92aeaa0a1f7f1868c3cb9ae65bd0459e4ef7bc9efe611d43edd
   languageName: node
   linkType: hard
 
@@ -16754,8 +16754,8 @@ __metadata:
     "@backstage/theme": "backstage:^"
     "@bcgov/bc-sans": "npm:^2.0.0"
     "@bcgov/design-tokens": "npm:^3.0.0"
-    "@bcgov/plugin-catalog-common-bc-data-catalogue": "npm:0.2.5-feature.dataset-prototype.a27cfa2c"
-    "@bcgov/plugin-catalog-dataset": "npm:0.2.5-feature.dataset-prototype.a27cfa2c"
+    "@bcgov/plugin-catalog-common-bc-data-catalogue": "npm:0.2.5-feature.dataset-prototype.4a5f3de2"
+    "@bcgov/plugin-catalog-dataset": "npm:0.2.5-feature.dataset-prototype.4a5f3de2"
     "@internal/plugin-integration-toolkit": "workspace:^"
     "@material-ui/core": "npm:^4.12.4"
     "@material-ui/icons": "npm:^4.11.3"
@@ -17599,8 +17599,8 @@ __metadata:
     "@backstage/plugin-search-backend-node": "backstage:^"
     "@backstage/plugin-techdocs-backend": "backstage:^"
     "@bcgov/csit-microcks-backend-backstage-plugin": "npm:0.1.1-main.fc7ba821"
-    "@bcgov/plugin-catalog-backend-module-bc-data-catalogue": "npm:0.2.5-feature.dataset-prototype.a27cfa2c"
-    "@bcgov/plugin-catalog-common-bc-data-catalogue": "npm:0.2.5-feature.dataset-prototype.a27cfa2c"
+    "@bcgov/plugin-catalog-backend-module-bc-data-catalogue": "npm:0.2.5-feature.dataset-prototype.4a5f3de2"
+    "@bcgov/plugin-catalog-common-bc-data-catalogue": "npm:0.2.5-feature.dataset-prototype.4a5f3de2"
     "@roadiehq/scaffolder-backend-module-http-request": "npm:^4.3.5"
     "@roadiehq/scaffolder-backend-module-utils": "npm:^3.3.0"
     "@types/express": "npm:^4.17.6"
