@@ -16,6 +16,11 @@ on:
       - '**/*.md'
       - 'examples/**'
     branches: ['main']
+  workflow_dispatch:
+    inputs:
+      packages:
+        description: 'Stringified JSON array of packages'
+        required: true
 
 # save resources. Don't take up a queue space doing a duplicate build
 concurrency:
@@ -23,13 +28,57 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  update-plugins:
+    if: github.event_name == 'workflow_dispatch'
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node/Yarn
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Update Dependencies
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # 1. Ensure .yarnrc.yml is correct for @bcgov scope
+          if [ -f .yarnrc.yml ]; then
+            sed -i 's|npmRegistryServer: "https://registry.npmjs.org"|npmRegistryServer: "https://npm.pkg.github.com"|' .yarnrc.yml
+          fi
+
+          # 2. Update packages from payload
+          echo '${{ github.event.inputs.packages }}' | jq -c '.[]' | while read -r pkg; do
+            NAME=$(echo "$pkg" | jq -r '.name')
+            VERSION=$(echo "$pkg" | jq -r '.version')
+            echo "Updating $NAME to $VERSION"
+            yarn up "$NAME@$VERSION"
+          done
+
+      - name: Commit and Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "**/package.json" yarn.lock .yarnrc.yml
+          if [[ -n $(git status --porcelain) ]]; then
+            git commit -m "chore: update plugins"
+            git push
+          fi
+
   call-build-workflow:
     permissions:
       contents: read
       packages: write
+    needs: [update-plugins]
+    if: always() && (needs.update-plugins.result == 'success' || needs.update-plugins.result == 'skipped')
     uses: ./.github/workflows/build.yaml
 
   get-short-sha:
+    needs: [update-plugins]
+    if: always() && (needs.update-plugins.result == 'success' || needs.update-plugins.result == 'skipped')
     uses: ./.github/workflows/get-short-sha.yaml
 
   # update-gitops-file:
