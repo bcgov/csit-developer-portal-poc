@@ -122,12 +122,12 @@ catalog:
         - allow: [Template]
     - type: url
       # target: https://github.com/bcgov/csit-connected-services-techdocs/blob/main/catalog-info.yaml
-      target: https://github.com/bcgov/csit-connected-services-techdocs/blob/type-url/catalog-info.yaml
+      target: https://github.com/bcgov/csit-connected-services-techdocs/blob/dev/catalog-info.yaml
       rules:
-        - allow: [Component]
+        - allow: [Location, Component]
     - type: url
       # target: https://github.com/bcgov/csit-connected-services-techdocs/blob/main/examples/seed-catalog-info.yaml
-      target: https://github.com/bcgov/csit-connected-services-techdocs/blob/type-url/examples/seed-catalog-info.yaml
+      target: https://github.com/bcgov/csit-connected-services-techdocs/blob/dev/getting-started/examples/seed-catalog-info.yaml
       rules:
         - allow: [Location, Component, API]
   rules:
