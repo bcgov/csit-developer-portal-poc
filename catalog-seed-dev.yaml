@@ -6,4 +6,4 @@ spec:
     type: url
     targets:
       - https://github.com/bcgov/csit-connected-services-techdocs/blob/main/catalog-info.yaml
-      - https://github.com/bcgov/csit-connected-services-techdocs/blob/main/getting-started/examples/seed-catalog-info.yaml
+      - https://github.com/bcgov/csit-connected-services-techdocs/blob/APS-4206-nav/getting-started/examples/seed-catalog-info.yaml
