@@ -182,7 +182,7 @@ export const Root = ({ children }: PropsWithChildren<{}>) => {
         <SidebarScrollWrapper>
           <SidebarItem icon={MapIcon} to="tech-radar" text="Tech Radar" />
         </SidebarScrollWrapper> */}
-          <SidebarItem icon={CatalogIcon} to="catalog?filters[kind]=dataset" text="Catalog"></SidebarItem>
+          <SidebarItem icon={CatalogIcon} to="catalogue?filters[kind]=dataset" text="Catalogue"></SidebarItem>
         </SidebarGroup>
         {/* <SidebarDivider />
         <div className={classes.sidebarGroup}>

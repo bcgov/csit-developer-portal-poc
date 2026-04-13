@@ -43,6 +43,7 @@ import { protectedRoutes, redirectRoutes } from './components/utils/routes';
 import { RequirePermission } from '@backstage/plugin-permission-react';
 import { CsitLandingPage } from '@internal/plugin-integration-toolkit';
 import { CatalogDatasetPage } from '@bcgov/plugin-catalog-dataset';
+import { catalogTranslations } from './translations/catalog';
 
 const github_auth_provider = {
   id: 'github-auth-provider',
@@ -54,6 +55,9 @@ const github_auth_provider = {
 
 const app = createApp({
   apis,
+  __experimentalTranslations: {
+    resources: [catalogTranslations],
+  },
   bindRoutes({ bind }) {
     bind(catalogPlugin.externalRoutes, {
       createComponent: scaffolderPlugin.routes.root,
@@ -121,6 +125,16 @@ const routes = (
     >
       {entityPage}
     </Route>
+
+    {/* Catalogue Route with Canadian spelling */}
+    <Route path="/catalogue" element={<CatalogIndexPage />} />
+    <Route
+      path="/catalogue/:namespace/:kind/:name"
+      element={<CatalogEntityPage />}
+    >
+      {entityPage}
+    </Route>
+    
     <Route path="/docs" element={<TechDocsIndexPage />} />
     <Route
       path="/docs/:namespace/:kind/:name/*"
