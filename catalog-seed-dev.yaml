@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+    name: seed
+spec:
+    type: url
+    targets:
+      - https://github.com/bcgov/developer-experience-team/blob/main/developer-portal/catalog/catalog-seed-dev.yml
+      - https://github.com/bcgov/developer-experience-team/blob/main/developer-portal/catalog/templates-seed-dev.yml
+      - https://github.com/bcgov/csit-connected-services-techdocs/blob/main/catalog-info.yaml
+      - https://github.com/bcgov/csit-connected-services-techdocs/blob/main/getting-started/examples/seed-catalog-info.yaml
