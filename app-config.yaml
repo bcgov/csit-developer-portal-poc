@@ -167,6 +167,9 @@ techdocs:
   publisher:
     type: 'local' # Alternatives - 'googleGcs' or 'awsS3'. Read documentation for using alternatives.
   sanitizer:
+    allowedAttributes:
+      span: [class, title]
+      abbr: [class, title]
     allowedIframeHosts:
       - www.youtube.com
       - miro.com

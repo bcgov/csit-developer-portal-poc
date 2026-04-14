@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import { useShadowRootElements } from '@backstage/plugin-techdocs-react';
 
 /**
@@ -18,91 +18,61 @@ import { useShadowRootElements } from '@backstage/plugin-techdocs-react';
  *   techdocs.sanitizer.allowedAttributes.span: [class, title]
  */
 export const TooltipAddon = () => {
-  const abbrElements = useShadowRootElements<HTMLElement>([
+  const titledElements = useShadowRootElements<HTMLElement>([
     'abbr[title]',
-    'span[title]',
+    '[title]:not([title=""])',
   ]);
-  const tooltipRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    if (!abbrElements.length) return;
+    if (!titledElements.length) return;
 
-    const tooltip = document.createElement('div');
-    tooltip.setAttribute('role', 'tooltip');
-    Object.assign(tooltip.style, {
-      position: 'fixed',
-      background: 'red',
-      color: '#fff',
-      fontSize: '0.7rem',
-      lineHeight: '1.4',
-      padding: '4px 8px',
-      borderRadius: '2px',
-      whiteSpace: 'nowrap',
-      pointerEvents: 'none',
-      zIndex: '99999',
-      boxShadow: '0 2px 4px rgba(0,0,0,.3)',
-      display: 'none',
-    });
-    document.body.appendChild(tooltip);
-    tooltipRef.current = tooltip;
+    const rootNode = titledElements[0].getRootNode();
+    // If this isn't a ShadowRoot, we can't inject styles where TechDocs renders.
+    if (!(rootNode instanceof ShadowRoot)) return;
 
-    const show = (text: string) => (e: MouseEvent) => {
-      tooltip.textContent = text;
-      tooltip.style.display = 'block';
-      position(e);
-    };
+    const styleId = 'techdocs-tooltip-addon-styles';
+    const existing = rootNode.getElementById?.(styleId);
+    if (existing) return;
 
-    const position = (e: MouseEvent) => {
-      const x = e.clientX + 14;
-      const y = e.clientY - 32;
-      // Keep tooltip within viewport horizontally
-      const maxX = window.innerWidth - tooltip.offsetWidth - 8;
-      tooltip.style.left = `${Math.min(x, maxX)}px`;
-      tooltip.style.top = `${Math.max(y, 8)}px`;
-    };
+    const style = document.createElement('style');
+    style.id = styleId;
+    style.textContent = `
+abbr[title],
+[title]:not([title=""]) {
+  position: relative;
+  cursor: help;
+}
 
-    const hide = () => {
-      tooltip.style.display = 'none';
-    };
+abbr[title]::after,
+[title]:not([title=""])::after {
+  content: attr(title);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #37474f;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 4px 8px;
+  border-radius: 2px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 100;
+}
 
-    const cleanups: (() => void)[] = [];
-
-    abbrElements.forEach(el => {
-      if (el.dataset.tooltipInit) return;
-      el.dataset.tooltipInit = '1';
-
-      const title = el.getAttribute('title') ?? '';
-      if (!title) return;
-
-      // Remove native title attribute to prevent double-tooltip (browser default + ours)
-      el.removeAttribute('title');
-      el.setAttribute('data-tooltip', title);
-      el.style.cursor = 'help';
-
-      const onEnter = show(title);
-      const onLeave = hide;
-
-      el.addEventListener('mouseenter', onEnter);
-      el.addEventListener('mousemove', position);
-      el.addEventListener('mouseleave', onLeave);
-
-      cleanups.push(() => {
-        el.removeEventListener('mouseenter', onEnter);
-        el.removeEventListener('mousemove', position);
-        el.removeEventListener('mouseleave', onLeave);
-        // Restore title so content is still accessible after unmount
-        el.setAttribute('title', title);
-        el.removeAttribute('data-tooltip');
-        delete el.dataset.tooltipInit;
-      });
-    });
+abbr[title]:hover::after,
+[title]:not([title=""]):hover::after {
+  opacity: 1;
+}
+`;
+    rootNode.appendChild(style);
 
     return () => {
-      cleanups.forEach(c => c());
-      tooltip.remove();
-      tooltipRef.current = null;
+      style.remove();
     };
-  }, [abbrElements]);
+  }, [titledElements]);
 
   return null;
 };

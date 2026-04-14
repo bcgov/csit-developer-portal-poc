@@ -34,6 +34,7 @@ import { HomepageCompositionRoot } from '@backstage/plugin-home';
 import HomePage from './components/home/HomePage';
 import { TocFix } from '@app/plugin-toc-fix2';
 import { TechdocExpandableToc } from '@app/plugin-expandable-toc';
+import { TechDocsTooltip } from '@app/plugin-techdocs-tooltip';
 import { Mermaid } from 'backstage-plugin-techdocs-addon-mermaid';
 import { Custom404Page } from './components/404/Custom404Page';
 import { githubAuthApiRef } from '@backstage/core-plugin-api';
@@ -141,6 +142,7 @@ const routes = (
       element={<TechDocsReaderPage />}
     >
       <TechDocsAddons>
+        <TechDocsTooltip />
         <ReportIssue />
         <TocFix />
         {/* <ExpandableNavigation /> */}

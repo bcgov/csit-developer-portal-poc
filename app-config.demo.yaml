@@ -76,6 +76,9 @@ techdocs:
   publisher:
     type: 'local'
   sanitizer:
+    allowedAttributes:
+      span: [class, title]
+      abbr: [class, title]
     allowedIframeHosts:
       - www.youtube.com
       - miro.com

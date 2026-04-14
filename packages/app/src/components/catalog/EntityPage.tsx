@@ -57,6 +57,7 @@ import {
 import { TechDocsAddons } from '@backstage/plugin-techdocs-react';
 import { ReportIssue } from '@backstage/plugin-techdocs-module-addons-contrib';
 import { Mermaid } from 'backstage-plugin-techdocs-addon-mermaid';
+import { TechDocsTooltip } from '@app/plugin-techdocs-tooltip';
 
 import { EntitySecurityInsightsContent } from '@roadiehq/backstage-plugin-security-insights';
 import { CatalogDatasetPage } from '@bcgov/plugin-catalog-dataset';
@@ -64,6 +65,7 @@ import { CatalogDatasetPage } from '@bcgov/plugin-catalog-dataset';
 const techdocsContent = (
   <EntityTechdocsContent>
     <TechDocsAddons>
+      <TechDocsTooltip />
       <ReportIssue />
       <Mermaid
         config={{ theme: 'forest', themeVariables: { lineColor: '#000000' } }}
