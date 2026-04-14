@@ -81,7 +81,20 @@ To update this deployment:
   on the desired branch
 - update the version tag in the APS infra repo
 
-<!-- See the [gitops repo](https://github.com/bcgov-c/tenant-gitops-f5ff48). -->
+### Catalog Seed for CSIT TechDocs
+
+The catalog seed file pointing to the [CSIT TechDocs
+repo](https://github.com/bcgov/csit-connected-services-techdocs/) and some
+example APIs is located in the
+[catalog-seed-dev.yaml](https://github.com/bcgov/csit-developer-portal-poc/blob/catalog-seed/catalog-seed-dev.yaml)
+file in the `catalog-seed` branch of this repo.
+
+Update this file to change the TechDocs branch or add/remove APIs or other entities. Changes to this file are unregulated.
+
+To update the catalog seed:
+
+- update the catalog-seed-dev.yaml file
+- restart the Backstage instance (`yarn start` locally or restart the container)
 
 ### More information
 
