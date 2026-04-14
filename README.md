@@ -94,7 +94,12 @@ Update this file to change the TechDocs branch or add/remove APIs or other entit
 To update the catalog seed:
 
 - update the catalog-seed-dev.yaml file
-- restart the Backstage instance (`yarn start` locally or restart the container)
+- refresh the `csit-devhub-seed` Location in the Backstage catalog ([here in demo deployment](https://csit-devhub-apps-gov-bc-ca.dev.api.gov.bc.ca/catalog/default/location/csit-devhub-seed))
+  - Navigate to the *Catalog* in the Backstage application.
+  - Switch from the *Components* view to the *Locations* view.
+  - Open the `csit-devhub-seed` Location.
+  - Click the *Refresh* button ("Scheduled entity refresh").
+  - Alternatively, restart the Backstage instance (`yarn start` locally or restart the container)
 
 ### More information
 
