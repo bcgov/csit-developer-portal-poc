@@ -74,8 +74,6 @@ catalog:
         - allow: [Template]
     - type: url
       target: https://github.com/bcgov/csit-developer-portal-poc/blob/catalog-seed/catalog-seed-dev.yaml
-      rules:
-        - allow: [Component, Location]
 
 csitMicrocks:
   server:
