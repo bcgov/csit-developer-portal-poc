@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react';
 import { makeStyles } from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
-// import CatalogIcon from '@material-ui/icons/LocalLibrary';
+import CatalogIcon from '@material-ui/icons/LocalLibrary';
 // import ExtensionIcon from '@material-ui/icons/Extension';
 // import MapIcon from '@material-ui/icons/MyLocation';
 import LibraryBooks from '@material-ui/icons/LibraryBooks';
@@ -182,6 +182,7 @@ export const Root = ({ children }: PropsWithChildren<{}>) => {
         <SidebarScrollWrapper>
           <SidebarItem icon={MapIcon} to="tech-radar" text="Tech Radar" />
         </SidebarScrollWrapper> */}
+          <SidebarItem icon={CatalogIcon} to="catalogue?filters[kind]=dataset" text="Catalogue"></SidebarItem>
         </SidebarGroup>
         {/* <SidebarDivider />
         <div className={classes.sidebarGroup}>
