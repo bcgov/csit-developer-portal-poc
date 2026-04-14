@@ -99,7 +99,8 @@ To update the catalog seed:
   - Switch from the *Components* view to the *Locations* view.
   - Open the `csit-devhub-seed` Location.
   - Click the *Refresh* button ("Scheduled entity refresh").
-  - Alternatively, restart the Backstage instance (`yarn start` locally or restart the container)
+  - Wait for the refresh to complete (may take a few minutes?)
+- Alternatively, restart the Backstage instance (`yarn start` locally or restart the container)
 
 ### More information
 
