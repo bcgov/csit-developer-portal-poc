@@ -56,7 +56,7 @@ jobs:
             NAME=$(echo "$pkg" | jq -r '.name')
             VERSION=$(echo "$pkg" | jq -r '.version')
             echo "Updating $NAME to $VERSION"
-            yarn up "$NAME@$VERSION"
+            yarn up "$NAME@$VERSION" --mode=update-lockfile
           done
 
       - name: Commit and Push
@@ -65,7 +65,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add "**/package.json" yarn.lock .yarnrc.yml
           if [[ -n $(git status --porcelain) ]]; then
-            git commit -m "chore: update plugins"
+            git commit -m "update plugins"
             git push
           fi
 
