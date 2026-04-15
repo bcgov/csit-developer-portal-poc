@@ -6734,39 +6734,39 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bcgov/plugin-catalog-backend-module-bc-data-catalogue@npm:0.2.5-feature.dataset-prototype.4a5f3de2":
-  version: 0.2.5-feature.dataset-prototype.4a5f3de2
-  resolution: "@bcgov/plugin-catalog-backend-module-bc-data-catalogue@npm:0.2.5-feature.dataset-prototype.4a5f3de2::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40bcgov%2Fplugin-catalog-backend-module-bc-data-catalogue%2F0.2.5-feature.dataset-prototype.4a5f3de2%2F90f1180c1e9bd85f6d95a167902a1c1aa3bdf926"
+"@bcgov/plugin-catalog-backend-module-bc-data-catalogue@npm:0.2.5-feature.aps-4105-connect-pipelines.34321e36":
+  version: 0.2.5-feature.aps-4105-connect-pipelines.34321e36
+  resolution: "@bcgov/plugin-catalog-backend-module-bc-data-catalogue@npm:0.2.5-feature.aps-4105-connect-pipelines.34321e36::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40bcgov%2Fplugin-catalog-backend-module-bc-data-catalogue%2F0.2.5-feature.aps-4105-connect-pipelines.34321e36%2F98823a8d2c7085c714a267bacedf07751be24fbf"
   dependencies:
     "@backstage/backend-plugin-api": "npm:^1.4.1"
     "@backstage/config": "npm:^1.3.2"
-    "@bcgov/plugin-catalog-common-bc-data-catalogue": "npm:0.2.5-feature.dataset-prototype.4a5f3de2"
-  checksum: 10c0/3a8e8a2c989856dad7e211c791af4ee19201e021a325b05063ceeb2d626b49bc79ad382b99f990cf9346cc14dd5eb474b58ae952180515d47180fd678b44c7f5
+    "@bcgov/plugin-catalog-common-bc-data-catalogue": "npm:0.2.5-feature.aps-4105-connect-pipelines.34321e36"
+  checksum: 10c0/d8056931c4efed8043350eb122ea8cc0f74c41302c9f79dd514048da9dd7bcc656a53e867aa1b4218203b0babd71811bc9c9d1849bef1759a95911fe35a59036
   languageName: node
   linkType: hard
 
-"@bcgov/plugin-catalog-common-bc-data-catalogue@npm:0.2.5-feature.dataset-prototype.4a5f3de2":
-  version: 0.2.5-feature.dataset-prototype.4a5f3de2
-  resolution: "@bcgov/plugin-catalog-common-bc-data-catalogue@npm:0.2.5-feature.dataset-prototype.4a5f3de2::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40bcgov%2Fplugin-catalog-common-bc-data-catalogue%2F0.2.5-feature.dataset-prototype.4a5f3de2%2F403d036cfc6cf3f03685f654f3b2fe21858e371f"
-  checksum: 10c0/a6df6ac647e27cec09ed39bdfba10a2c968ff639154d30c407ed73f0d6e07536583bdd451e24d93bef9b986e0eb6d1f7cb329f7b2d7e786447a773cf99a1883f
+"@bcgov/plugin-catalog-common-bc-data-catalogue@npm:0.2.5-feature.aps-4105-connect-pipelines.34321e36":
+  version: 0.2.5-feature.aps-4105-connect-pipelines.34321e36
+  resolution: "@bcgov/plugin-catalog-common-bc-data-catalogue@npm:0.2.5-feature.aps-4105-connect-pipelines.34321e36::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40bcgov%2Fplugin-catalog-common-bc-data-catalogue%2F0.2.5-feature.aps-4105-connect-pipelines.34321e36%2F55cbdaf7ec5e7b8aeab179aa75d186ebed6db7a9"
+  checksum: 10c0/0d655c0852234c2bded5ff7cf885173f4336510982d762032a4d97cede6475ca1531b3d8559e2ec267798b42f277c2f56c208b2ae729eb848ff1901818b04bfb
   languageName: node
   linkType: hard
 
-"@bcgov/plugin-catalog-dataset@npm:0.2.5-feature.dataset-prototype.4a5f3de2":
-  version: 0.2.5-feature.dataset-prototype.4a5f3de2
-  resolution: "@bcgov/plugin-catalog-dataset@npm:0.2.5-feature.dataset-prototype.4a5f3de2::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40bcgov%2Fplugin-catalog-dataset%2F0.2.5-feature.dataset-prototype.4a5f3de2%2F4c7c0b31173f8a26ac4aa9394e3cb2e46bfef96a"
+"@bcgov/plugin-catalog-dataset@npm:0.2.5-feature.aps-4105-connect-pipelines.34321e36":
+  version: 0.2.5-feature.aps-4105-connect-pipelines.34321e36
+  resolution: "@bcgov/plugin-catalog-dataset@npm:0.2.5-feature.aps-4105-connect-pipelines.34321e36::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40bcgov%2Fplugin-catalog-dataset%2F0.2.5-feature.aps-4105-connect-pipelines.34321e36%2Fa0aa60fb9d22d75324808c0bafc7eecf7ef9d273"
   dependencies:
     "@backstage/core-components": "npm:^0.17.3"
     "@backstage/core-plugin-api": "npm:^1.10.9"
     "@backstage/theme": "npm:^0.6.6"
-    "@bcgov/plugin-catalog-common-bc-data-catalogue": "npm:0.2.5-feature.dataset-prototype.4a5f3de2"
+    "@bcgov/plugin-catalog-common-bc-data-catalogue": "npm:0.2.5-feature.aps-4105-connect-pipelines.34321e36"
     "@material-ui/core": "npm:^4.9.13"
     "@material-ui/icons": "npm:^4.9.1"
     "@material-ui/lab": "npm:^4.0.0-alpha.61"
     react-use: "npm:^17.2.4"
   peerDependencies:
     react: ^16.13.1 || ^17.0.0 || ^18.0.0
-  checksum: 10c0/f57359ce8efa48d09a26c04400027ef39937371c527ccc46c5cf1cacc224757b0fc6802c8b10f92aeaa0a1f7f1868c3cb9ae65bd0459e4ef7bc9efe611d43edd
+  checksum: 10c0/e2c22f8d636ceea37809739e784a3eb241cedd20ec3c8c1664b93c114bbfe49de1da13282f062ff4ae205bc92f957171c500f55ae762cb7ae9b63c912da9fe6d
   languageName: node
   linkType: hard
 
@@ -16754,8 +16754,8 @@ __metadata:
     "@backstage/theme": "backstage:^"
     "@bcgov/bc-sans": "npm:^2.0.0"
     "@bcgov/design-tokens": "npm:^3.0.0"
-    "@bcgov/plugin-catalog-common-bc-data-catalogue": "npm:0.2.5-feature.dataset-prototype.4a5f3de2"
-    "@bcgov/plugin-catalog-dataset": "npm:0.2.5-feature.dataset-prototype.4a5f3de2"
+    "@bcgov/plugin-catalog-common-bc-data-catalogue": "npm:0.2.5-feature.aps-4105-connect-pipelines.34321e36"
+    "@bcgov/plugin-catalog-dataset": "npm:0.2.5-feature.aps-4105-connect-pipelines.34321e36"
     "@internal/plugin-integration-toolkit": "workspace:^"
     "@material-ui/core": "npm:^4.12.4"
     "@material-ui/icons": "npm:^4.11.3"
@@ -17599,8 +17599,8 @@ __metadata:
     "@backstage/plugin-search-backend-node": "backstage:^"
     "@backstage/plugin-techdocs-backend": "backstage:^"
     "@bcgov/csit-microcks-backend-backstage-plugin": "npm:0.1.1-main.fc7ba821"
-    "@bcgov/plugin-catalog-backend-module-bc-data-catalogue": "npm:0.2.5-feature.dataset-prototype.4a5f3de2"
-    "@bcgov/plugin-catalog-common-bc-data-catalogue": "npm:0.2.5-feature.dataset-prototype.4a5f3de2"
+    "@bcgov/plugin-catalog-backend-module-bc-data-catalogue": "npm:0.2.5-feature.aps-4105-connect-pipelines.34321e36"
+    "@bcgov/plugin-catalog-common-bc-data-catalogue": "npm:0.2.5-feature.aps-4105-connect-pipelines.34321e36"
     "@roadiehq/scaffolder-backend-module-http-request": "npm:^4.3.5"
     "@roadiehq/scaffolder-backend-module-utils": "npm:^3.3.0"
     "@types/express": "npm:^4.17.6"
