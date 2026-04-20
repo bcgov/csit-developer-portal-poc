@@ -46,12 +46,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # 1. Ensure .yarnrc.yml is correct for @bcgov scope
-          if [ -f .yarnrc.yml ]; then
-            sed -i 's|npmRegistryServer: "https://registry.npmjs.org"|npmRegistryServer: "https://npm.pkg.github.com"|' .yarnrc.yml
-          fi
 
-          # 2. Update packages from payload
+          # Update packages from payload
           echo '${{ github.event.inputs.packages }}' | jq -c '.[]' | while read -r pkg; do
             NAME=$(echo "$pkg" | jq -r '.name')
             VERSION=$(echo "$pkg" | jq -r '.version')
