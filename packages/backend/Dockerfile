@@ -26,8 +26,7 @@ COPY $EXTERNAL_SOURCE/packages/app/package.json ./packages/app/package.json
 COPY $EXTERNAL_SOURCE/packages/backend/package.json ./packages/backend/package.json
 COPY $EXTERNAL_SOURCE/plugins/ ./plugins/
 
-RUN --mount=type=secret,id=GITHUB_TOKEN \
-    export GITHUB_TOKEN=$(cat /run/secrets/GITHUB_TOKEN) && \
+RUN --mount=type=secret,id=GITHUB_TOKEN,env=GITHUB_TOKEN \
     "$YARN" install --immutable
 
 # Stage 3 - Build packages
@@ -57,8 +56,7 @@ COPY $EXTERNAL_SOURCE/app-config.yaml  \
 COPY $EXTERNAL_SOURCE/app-config.demo.yaml* ./
 
 # Install production dependencies
-RUN --mount=type=secret,id=GITHUB_TOKEN \
-    export GITHUB_TOKEN=$(cat /run/secrets/GITHUB_TOKEN) && \
+RUN --mount=type=secret,id=GITHUB_TOKEN,env=GITHUB_TOKEN \
     "$YARN" workspaces focus --all --production && "$YARN" cache clean
 
 # Stage 5 - Build the runner image

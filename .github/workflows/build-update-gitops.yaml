@@ -28,6 +28,7 @@ jobs:
     permissions:
       contents: read
       packages: write
+    secrets: inherit
     uses: ./.github/workflows/build.yaml
 
   get-short-sha:
