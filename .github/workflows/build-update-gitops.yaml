@@ -15,7 +15,7 @@ on:
       - 'catalog-info.yaml'
       - '**/*.md'
       - 'examples/**'
-    branches: ['main', 'aps-4105-connect-pipelines']
+    branches: ['main']
   workflow_dispatch:
 
 # save resources. Don't take up a queue space doing a duplicate build
