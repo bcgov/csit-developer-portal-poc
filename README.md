@@ -22,21 +22,13 @@ This is the proof of concept of the Connected Services Integration Toolkit integ
 
 ### Running
 
-To run the project:
+To run the project, run the following at the project's root directory:
 
-1. Follow the [plugin instructions](https://github.com/bcgov/csit-backstage-poc/pkgs/npm/plugin-catalog-backend-module-bc-data-catalogue) to be able to pull the plugin from GitHub Packages.
-   
-2. Ensure you have the `GITHUB_TOKEN` environment variable set with a GitHub Personal Access Token that has access to the package.
+Note: While not required for installing packages, you will still need a `GITHUB_TOKEN` environment variable set at runtime for the portal's GitHub integrations (Catalog, Scaffolder, etc.) to function.
 
 ```
-$ export GITHUB_TOKEN=your_personal_access_token
-```
-
-3. Run the following at the project's root directory
-
-```
-$ yarn install
-$ yarn start
+yarn install
+yarn start
 ```
 
 ### Testing
