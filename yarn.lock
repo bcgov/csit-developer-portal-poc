@@ -6531,9 +6531,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bcgov/csit-microcks-backend-backstage-plugin@npm:0.1.0-feature.aps-4105-connect-pipelines.b0745ca4":
-  version: 0.1.0-feature.aps-4105-connect-pipelines.b0745ca4
-  resolution: "@bcgov/csit-microcks-backend-backstage-plugin@npm:0.1.0-feature.aps-4105-connect-pipelines.b0745ca4"
+"@bcgov/csit-microcks-backend-backstage-plugin@npm:0.1.1-main.c822a801":
+  version: 0.1.1-main.c822a801
+  resolution: "@bcgov/csit-microcks-backend-backstage-plugin@npm:0.1.1-main.c822a801"
   dependencies:
     "@backstage/backend-defaults": "npm:^0.11.0"
     "@backstage/backend-plugin-api": "npm:^1.4.0"
@@ -6544,7 +6544,7 @@ __metadata:
     express: "npm:^4.14.0"
     express-promise-router: "npm:^4.1.0"
     zod: "npm:^3.25.76"
-  checksum: 10c0/75b427c965004c7a08557b2b1a13af5356990172b294f8d66287c78d753cdcda8fb77fac541a508e84456b73cab9545042cc33fb35cfa272b3898cdce832014d
+  checksum: 10c0/bdbb2d1654a3cc057f13956fa05ea11902d3b35b78856d9465bd8de1a21fd6588469f20dabe5eeffa4728b07f090b64a03a9580b66eae187df0f532b27bf8554
   languageName: node
   linkType: hard
 
@@ -17419,7 +17419,7 @@ __metadata:
     "@backstage/plugin-search-backend-module-techdocs": "backstage:^"
     "@backstage/plugin-search-backend-node": "backstage:^"
     "@backstage/plugin-techdocs-backend": "backstage:^"
-    "@bcgov/csit-microcks-backend-backstage-plugin": "npm:0.1.0-feature.aps-4105-connect-pipelines.b0745ca4"
+    "@bcgov/csit-microcks-backend-backstage-plugin": "npm:0.1.1-main.c822a801"
     "@bcgov/plugin-catalog-backend-module-bc-data-catalogue": "npm:0.2.5-feature.aps-4105-connect-pipelines.8e93874b"
     "@bcgov/plugin-catalog-common-bc-data-catalogue": "npm:0.2.5-feature.aps-4105-connect-pipelines.8e93874b"
     "@roadiehq/scaffolder-backend-module-http-request": "npm:^4.3.5"
