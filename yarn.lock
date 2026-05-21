@@ -6555,39 +6555,39 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bcgov/plugin-catalog-backend-module-bc-data-catalogue@npm:0.2.9-feature.aps-4589-bump-version.7abeedb9":
-  version: 0.2.9-feature.aps-4589-bump-version.7abeedb9
-  resolution: "@bcgov/plugin-catalog-backend-module-bc-data-catalogue@npm:0.2.9-feature.aps-4589-bump-version.7abeedb9"
+"@bcgov/plugin-catalog-backend-module-bc-data-catalogue@npm:0.2.10-feature.aps-4589-bump-version.44523cb0":
+  version: 0.2.10-feature.aps-4589-bump-version.44523cb0
+  resolution: "@bcgov/plugin-catalog-backend-module-bc-data-catalogue@npm:0.2.10-feature.aps-4589-bump-version.44523cb0"
   dependencies:
     "@backstage/backend-plugin-api": "npm:^1.4.1"
     "@backstage/config": "npm:^1.3.2"
-    "@bcgov/plugin-catalog-common-bc-data-catalogue": "npm:0.2.9-feature.aps-4589-bump-version.7abeedb9"
-  checksum: 10c0/d13fe79c99265c6c9434357b82933a95847ddfc3c534eb7545d3b503d3213098403d295f7beff05580b10881a8b96d547d202ade87a18c904b674695c3e674fd
+    "@bcgov/plugin-catalog-common-bc-data-catalogue": "npm:0.2.10-feature.aps-4589-bump-version.44523cb0"
+  checksum: 10c0/731f77ceaf9c69fe0e1ef0423f0426779abd6d9dce964fcc7bb9e0c260ab5d85c39c6a3bd3cc604d643d3ea0e12e10319636c07e1b2682c1834e0c990669fb6e
   languageName: node
   linkType: hard
 
-"@bcgov/plugin-catalog-common-bc-data-catalogue@npm:0.2.9-feature.aps-4589-bump-version.7abeedb9":
-  version: 0.2.9-feature.aps-4589-bump-version.7abeedb9
-  resolution: "@bcgov/plugin-catalog-common-bc-data-catalogue@npm:0.2.9-feature.aps-4589-bump-version.7abeedb9"
-  checksum: 10c0/4a2132bfa45bc3c06123427571a9d5e484bf4fdfce970e65e7cacbc25e1b793070ef495f88496e8c74ffe9e95fc3bb1d178e6f62fd2955dc15f018b66916db5b
+"@bcgov/plugin-catalog-common-bc-data-catalogue@npm:0.2.10-feature.aps-4589-bump-version.44523cb0":
+  version: 0.2.10-feature.aps-4589-bump-version.44523cb0
+  resolution: "@bcgov/plugin-catalog-common-bc-data-catalogue@npm:0.2.10-feature.aps-4589-bump-version.44523cb0"
+  checksum: 10c0/7c89c1051d80f214facd95da58332e7f5b7165e73086c75e9d2bf8f7a90dc349794f6986f7d4577ca9d639f668d979a5c7784781901f34aec73ab6a577962683
   languageName: node
   linkType: hard
 
-"@bcgov/plugin-catalog-dataset@npm:0.2.9-feature.aps-4589-bump-version.7abeedb9":
-  version: 0.2.9-feature.aps-4589-bump-version.7abeedb9
-  resolution: "@bcgov/plugin-catalog-dataset@npm:0.2.9-feature.aps-4589-bump-version.7abeedb9"
+"@bcgov/plugin-catalog-dataset@npm:0.2.10-feature.aps-4589-bump-version.44523cb0":
+  version: 0.2.10-feature.aps-4589-bump-version.44523cb0
+  resolution: "@bcgov/plugin-catalog-dataset@npm:0.2.10-feature.aps-4589-bump-version.44523cb0"
   dependencies:
     "@backstage/core-components": "npm:^0.17.3"
     "@backstage/core-plugin-api": "npm:^1.10.9"
     "@backstage/theme": "npm:^0.6.6"
-    "@bcgov/plugin-catalog-common-bc-data-catalogue": "npm:0.2.9-feature.aps-4589-bump-version.7abeedb9"
+    "@bcgov/plugin-catalog-common-bc-data-catalogue": "npm:0.2.10-feature.aps-4589-bump-version.44523cb0"
     "@material-ui/core": "npm:^4.9.13"
     "@material-ui/icons": "npm:^4.9.1"
     "@material-ui/lab": "npm:^4.0.0-alpha.61"
     react-use: "npm:^17.2.4"
   peerDependencies:
     react: ^16.13.1 || ^17.0.0 || ^18.0.0
-  checksum: 10c0/db25df8c8c61c218c1792998d19e1f252df857f1a060c7952d7540b35dcde45d07e62336e64df21c870b8303b630e1ece371c2168c1004fa4d24f523e23e9b4a
+  checksum: 10c0/1c87bf1b5703acaf16ade1e7a3279b228f98120eff72886559c65b2cd74dd50115d16bf25e5e5d9ba1b95e963f0bf09bd6c97a970cad2ea0aec8dedb21914bfd
   languageName: node
   linkType: hard
 
@@ -16575,8 +16575,8 @@ __metadata:
     "@backstage/theme": "backstage:^"
     "@bcgov/bc-sans": "npm:^2.0.0"
     "@bcgov/design-tokens": "npm:^3.0.0"
-    "@bcgov/plugin-catalog-common-bc-data-catalogue": "npm:0.2.9-feature.aps-4589-bump-version.7abeedb9"
-    "@bcgov/plugin-catalog-dataset": "npm:0.2.9-feature.aps-4589-bump-version.7abeedb9"
+    "@bcgov/plugin-catalog-common-bc-data-catalogue": "npm:0.2.10-feature.aps-4589-bump-version.44523cb0"
+    "@bcgov/plugin-catalog-dataset": "npm:0.2.10-feature.aps-4589-bump-version.44523cb0"
     "@internal/plugin-integration-toolkit": "workspace:^"
     "@material-ui/core": "npm:^4.12.4"
     "@material-ui/icons": "npm:^4.11.3"
@@ -17420,8 +17420,8 @@ __metadata:
     "@backstage/plugin-search-backend-node": "backstage:^"
     "@backstage/plugin-techdocs-backend": "backstage:^"
     "@bcgov/csit-microcks-backend-backstage-plugin": "npm:0.1.1-main.c822a801"
-    "@bcgov/plugin-catalog-backend-module-bc-data-catalogue": "npm:0.2.9-feature.aps-4589-bump-version.7abeedb9"
-    "@bcgov/plugin-catalog-common-bc-data-catalogue": "npm:0.2.9-feature.aps-4589-bump-version.7abeedb9"
+    "@bcgov/plugin-catalog-backend-module-bc-data-catalogue": "npm:0.2.10-feature.aps-4589-bump-version.44523cb0"
+    "@bcgov/plugin-catalog-common-bc-data-catalogue": "npm:0.2.10-feature.aps-4589-bump-version.44523cb0"
     "@roadiehq/scaffolder-backend-module-http-request": "npm:^4.3.5"
     "@roadiehq/scaffolder-backend-module-utils": "npm:^3.3.0"
     "@types/express": "npm:^4.17.6"
