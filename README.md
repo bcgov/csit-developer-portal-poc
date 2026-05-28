@@ -11,7 +11,25 @@ This is the proof of concept of the Connected Services Integration Toolkit integ
 
 ### Required Tools
 
-- Node [long-term-support version](https://nodejs.dev/en/about/releases/) (i.e. lts/hydrogen)
+- [nvm](https://github.com/nvm-sh/nvm)
+- Node 20, pinned in [.nvmrc](.nvmrc)
+- Yarn is pinned to 4.4.1 by `packageManager` and `.yarnrc.yml`
+
+For a new shell, run this once from the project root:
+
+```
+nvm install
+nvm use
+corepack enable
+```
+
+After that, `yarn` will use the repo-pinned Yarn version automatically.
+
+If you use [direnv](https://direnv.net/), this repo includes an `.envrc` that runs `nvm install` and `nvm use` whenever you enter the project directory. Enable it once with:
+
+```
+direnv allow
+```
 
 ### Setup
 
@@ -30,6 +48,8 @@ Note: While not required for installing packages, you will still need a `GITHUB_
 yarn install
 yarn start
 ```
+
+TechDocs MkDocs plugins are listed in [techdocs-requirements.txt](techdocs-requirements.txt). `yarn start` installs them into a project-local `.venv-techdocs` virtualenv and starts Backstage with that virtualenv on `PATH`. The Docker image uses the same requirements file, so local and deployed images use the same generator dependencies.
 
 ### Testing
 

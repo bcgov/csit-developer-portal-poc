@@ -26,7 +26,6 @@ node_modules/
 !.yarn/versions
 
 # Node version directives
-.nvmrc
 .tool-versions
 
 # dotenv environment variables file
@@ -68,4 +67,3 @@ e2e-test-report/
 *.code-workspace
 .vscode/*
 .swc/
-

@@ -63,6 +63,7 @@ techdocs:
       s3ForcePathStyle: true
 
 catalog:
+  processingInterval: { seconds: 10 }
   locations:
     - type: url
       target: https://github.com/bcgov/developer-experience-team/blob/main/developer-portal/catalog/catalog-seed-dev.yml

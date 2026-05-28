@@ -13,6 +13,7 @@ GITHUB_TOKEN ?= $(shell echo $$GITHUB_TOKEN)
 .PHONY: help
 help:
 	@echo "Available targets:"
+	@echo "  techdocs-deps - Install local Python dependencies for TechDocs generation"
 	@echo "  build-demo    - Build Docker image for local demo"
 	@echo "  run-demo      - Run locally with demo config (SQLite in-memory)"
 	@echo "  clean         - Remove local Docker images"
@@ -23,6 +24,10 @@ help:
 	@echo ""
 	@echo "Using CI-built image (check your repo name):"
 	@echo "  IMAGE_NAME=ghcr.io/$$(git remote get-url origin 2>/dev/null | sed 's/.*github.com[:/]//;s/.git$$//' || echo '<owner>/<repo>') make run-demo"
+
+.PHONY: techdocs-deps
+techdocs-deps:
+	yarn techdocs-deps
 
 # Build for demo (local testing)
 .PHONY: build-demo

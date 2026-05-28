@@ -6,7 +6,8 @@
     "node": "20 || 22"
   },
   "scripts": {
-    "start": "backstage-cli repo start",
+    "start": "yarn techdocs-deps && PATH=.venv-techdocs/bin:$PATH backstage-cli repo start",
+    "techdocs-deps": "scripts/ensure-techdocs-deps.sh",
     "build:backend": "yarn workspace backend build",
     "build:all": "backstage-cli repo build --all",
     "build-image": "yarn workspace backend build-image",

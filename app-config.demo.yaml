@@ -68,18 +68,6 @@ proxy:
         X-GitHub-Api-Version: '2022-11-28'
         Accept: application/vnd.github+json
 
-# TechDocs in local mode for demo
-techdocs:
-  builder: 'local'
-  generator:
-    runIn: 'local'
-  publisher:
-    type: 'local'
-  sanitizer:
-    allowedIframeHosts:
-      - www.youtube.com
-      - miro.com
-
 # Guest auth only for demo (no GitHub auth required)
 auth:
   environment: demo

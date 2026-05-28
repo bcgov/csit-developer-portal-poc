@@ -66,7 +66,8 @@ USER 0
 # Install dependencies to support TechDocs local build
 RUN microdnf install -y python3 python3-pip git \
     && microdnf clean all
-RUN pip3 install --no-cache-dir "mkdocs-techdocs-core==1.*" "mkpatcher" "mkdocs-git-revision-date-localized-plugin" "mkdocs-ezlinks-plugin"
+COPY techdocs-requirements.txt /tmp/techdocs-requirements.txt
+RUN pip3 install --no-cache-dir -r /tmp/techdocs-requirements.txt
 
 # Env vars
 ENV YARN=./.yarn/releases/yarn-4.4.1.cjs

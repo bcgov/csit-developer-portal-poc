@@ -1,0 +1,5 @@
+mkdocs-techdocs-core==1.*
+mkpatcher
+mkdocs-git-revision-date-localized-plugin
+mkdocs-git-authors-plugin
+mkdocs-ezlinks-plugin
