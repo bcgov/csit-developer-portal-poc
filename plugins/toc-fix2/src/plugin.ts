@@ -4,6 +4,7 @@ import {
 	createTechDocsAddonExtension,
 	TechDocsAddonLocations,
 } from '@backstage/plugin-techdocs-react';
+import { GitAuditStylesAddon } from './addons/GitAuditStyles';
 import { TocFixer } from './addons/TocFixer';
 
 export const tocFix2Plugin = createPlugin({
@@ -19,4 +20,12 @@ export const TocFix = tocFix2Plugin.provide(
 		location: TechDocsAddonLocations.Content,
 		component: TocFixer,
 	}),
+);
+
+export const GitAuditStyles = tocFix2Plugin.provide(
+  createTechDocsAddonExtension({
+    name: 'GitAuditStyles',
+    location: TechDocsAddonLocations.Content,
+    component: GitAuditStylesAddon,
+  }),
 );

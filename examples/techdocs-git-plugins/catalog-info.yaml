@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: techdocs-git-plugins-example
+  description: Example component showing TechDocs with git revision date and authors plugins.
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - techdocs
+spec:
+  type: service
+  lifecycle: experimental
+  owner: guests
+  system: examples

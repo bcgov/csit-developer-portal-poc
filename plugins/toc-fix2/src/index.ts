@@ -1,1 +1,1 @@
-export { tocFix2Plugin, TocFix } from './plugin';
+export { GitAuditStyles, tocFix2Plugin, TocFix } from './plugin';
