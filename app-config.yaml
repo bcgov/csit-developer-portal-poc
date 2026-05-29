@@ -159,6 +159,8 @@ proxy:
 # Reference documentation http://backstage.io/docs/features/techdocs/configuration
 techdocs:
   builder: 'local' # Alternatives - 'external'
+  gitMetadataPreparer:
+    enabled: true
   generator:
     runIn: 'local' # Alternatives - 'docker'
   publisher:

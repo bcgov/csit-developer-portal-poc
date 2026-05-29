@@ -22,8 +22,14 @@ plugins:
       enable_creation_date: true
       type: date
       fallback_to_build_date: true
-  - git-authors
+  - git-authors:
+      fallback_to_empty: true
 ```
+
+Backstage may generate TechDocs from a prepared temporary directory that does not
+include `.git` metadata. In that case, `fallback_to_build_date` keeps revision
+dates from failing the build, and `fallback_to_empty` keeps the authors plugin
+from failing when git history is unavailable.
 
 The component catalog descriptor points TechDocs at this directory with:
 

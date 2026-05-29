@@ -26,6 +26,7 @@ backend.add(
   ),
 );
 backend.add(import('@backstage/plugin-techdocs-backend'));
+backend.add(import('./extensions/gitMetadataTechDocsPreparer'));
 
 backend.add(import('@backstage/plugin-permission-backend'));
 backend.add(import('./extensions/permissionsPolicyExtension'));

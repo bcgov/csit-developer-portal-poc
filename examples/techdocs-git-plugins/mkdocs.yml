@@ -11,4 +11,5 @@ plugins:
       enable_creation_date: true
       type: date
       fallback_to_build_date: true
-  - git-authors
+  - git-authors:
+      fallback_to_empty: true
