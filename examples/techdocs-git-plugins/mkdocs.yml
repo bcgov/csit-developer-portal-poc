@@ -1,0 +1,14 @@
+site_name: TechDocs Git Plugins Example
+site_description: Example TechDocs site using git revision date and authors plugins.
+
+nav:
+  - Overview: index.md
+  - Operations: operations.md
+
+plugins:
+  - techdocs-core
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: date
+      fallback_to_build_date: true
+  - git-authors
