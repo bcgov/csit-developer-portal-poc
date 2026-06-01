@@ -14,6 +14,7 @@ coverage
 
 # Dependencies
 node_modules/
+.venv-techdocs/
 
 # Yarn 3 files
 .pnp.*
