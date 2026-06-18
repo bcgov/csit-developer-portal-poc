@@ -32,7 +32,7 @@ import { devExTheme } from './devex-theme';
 
 import { HomepageCompositionRoot } from '@backstage/plugin-home';
 import HomePage from './components/home/HomePage';
-import { TocFix } from '@app/plugin-toc-fix2';
+import { GitAuditStyles, TocFix } from '@app/plugin-toc-fix2';
 import { TechdocExpandableToc } from '@app/plugin-expandable-toc';
 import { Mermaid } from 'backstage-plugin-techdocs-addon-mermaid';
 import { Custom404Page } from './components/404/Custom404Page';
@@ -142,6 +142,7 @@ const routes = (
       <TechDocsAddons>
         <ReportIssue />
         <TocFix />
+        <GitAuditStyles />
         {/* <ExpandableNavigation /> */}
         <TechdocExpandableToc />
         <Mermaid

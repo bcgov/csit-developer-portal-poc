@@ -68,18 +68,6 @@ proxy:
         X-GitHub-Api-Version: '2022-11-28'
         Accept: application/vnd.github+json
 
-# TechDocs in local mode for demo
-techdocs:
-  builder: 'local'
-  generator:
-    runIn: 'local'
-  publisher:
-    type: 'local'
-  sanitizer:
-    allowedIframeHosts:
-      - www.youtube.com
-      - miro.com
-
 # Guest auth only for demo (no GitHub auth required)
 auth:
   environment: demo
@@ -92,12 +80,10 @@ search:
   collators:
     catalog:
       schedule:
-        initialDelay: { seconds: 3 }
+        initialDelay: { minutes: 2 }
         frequency: { minutes: 10 }
         timeout: { minutes: 15 }
-      filter:
-        kind:
-          ['API', 'Component', 'Domain', 'Group', 'Resource', 'System', 'User']
+      batchSize: 500
     # doesn't work but throws angry errors if not provided
     githubDiscussions:
       # url: ${GITHUB_DISCUSSIONS_URL}

@@ -26,9 +26,6 @@ search:
         initialDelay: { seconds: 3 }
         frequency: { minutes: 10 }
         timeout: { minutes: 15 }
-      filter:
-        kind:
-          ['API', 'Component', 'Domain', 'Group', 'Resource', 'System', 'User']
     githubDiscussions:
       url: ${GITHUB_DISCUSSIONS_URL} # required
       # default settings

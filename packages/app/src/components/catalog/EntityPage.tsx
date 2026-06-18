@@ -58,6 +58,7 @@ import {
 import { TechDocsAddons } from '@backstage/plugin-techdocs-react';
 import { ReportIssue } from '@backstage/plugin-techdocs-module-addons-contrib';
 import { Mermaid } from 'backstage-plugin-techdocs-addon-mermaid';
+import { GitAuditStyles } from '@app/plugin-toc-fix2';
 
 import { EntitySecurityInsightsContent } from '@roadiehq/backstage-plugin-security-insights';
 
@@ -72,6 +73,7 @@ const techdocsContent = (
   <EntityTechdocsContent>
     <TechDocsAddons>
       <ReportIssue />
+      <GitAuditStyles />
       <Mermaid
         config={{ theme: 'forest', themeVariables: { lineColor: '#000000' } }}
       />

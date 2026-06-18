@@ -26,7 +26,6 @@ node_modules/
 !.yarn/versions
 
 # Node version directives
-.nvmrc
 .tool-versions
 
 # dotenv environment variables file
@@ -36,6 +35,23 @@ node_modules/
 # Build output
 dist
 dist-types
+
+# Python build and compiler output
+build/
+*.egg-info/
+*.egg
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python tooling caches and reports
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
 
 # Temporary change files created by Vim
 *.swp
@@ -68,4 +84,3 @@ e2e-test-report/
 *.code-workspace
 .vscode/*
 .swc/
-

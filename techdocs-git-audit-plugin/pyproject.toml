@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "techdocs-git-audit-plugin"
+version = "0.1.0"
+description = "MkDocs plugin that renders creator and last updater git audit details for TechDocs pages."
+requires-python = ">=3.9"
+dependencies = ["mkdocs>=1.0"]
+
+[project.entry-points."mkdocs.plugins"]
+techdocs-git-audit = "techdocs_git_audit.plugin:TechDocsGitAuditPlugin"
