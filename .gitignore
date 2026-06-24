@@ -84,3 +84,4 @@ e2e-test-report/
 *.code-workspace
 .vscode/*
 .swc/
+/venv
