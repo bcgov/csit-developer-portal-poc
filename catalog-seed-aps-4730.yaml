@@ -6,6 +6,6 @@ spec:
     type: url
     targets:
       # - https://github.com/bcgov/csit-connected-services-techdocs/blob/dev/catalog-info.yaml
-      - https://github.com/bcgov/csit-connected-services-techdocs/blob/feature/aps-4730-add-itk-techdocs/catalog-info.yaml
+      - https://github.com/bcgov/csit-connected-services-techdocs/blob/feature-aps-4730-add-itk-techdocs/catalog-info.yaml
       - https://github.com/bcgov/csit-connected-services-techdocs/blob/main/getting-started/examples/seed-catalog-info.yaml
       - https://github.com/bcgov/csit-api-governance-spectral-style-guide/blob/feature/aps-4316/catalog-info.yaml
