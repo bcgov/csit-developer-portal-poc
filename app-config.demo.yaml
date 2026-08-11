@@ -77,6 +77,14 @@ auth:
       dangerouslyAllowOutsideDevelopment: true
 
 search:
+  pg:
+    highlightOptions:
+      useHighlight: true
+      maxWords: 45
+      minWords: 20
+      maxFragments: 2
+      fragmentDelimiter: ' ... '
+    normalization: 1
   collators:
     catalog:
       schedule:
