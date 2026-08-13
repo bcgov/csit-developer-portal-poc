@@ -80,8 +80,8 @@ search:
   pg:
     highlightOptions:
       useHighlight: true
-      maxWords: 45
-      minWords: 20
+      maxWords: 22
+      minWords: 10
       maxFragments: 2
       fragmentDelimiter: "\u00a0\u00a0...\u00a0\u00a0"
     normalization: 1
