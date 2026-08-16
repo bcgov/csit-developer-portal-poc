@@ -1,4 +1,6 @@
 import { Button, Grid } from '@material-ui/core';
+import { ApiReferenceReact } from '@scalar/api-reference-react';
+import '@scalar/api-reference-react/style.css';
 import {
   EntityApiDefinitionCard,
   EntityConsumedApisCard,
@@ -54,6 +56,8 @@ import {
   RELATION_PART_OF,
   RELATION_PROVIDES_API,
 } from '@backstage/catalog-model';
+import type { ApiEntity } from '@backstage/catalog-model';
+import { useEntity } from '@backstage/plugin-catalog-react';
 
 import { TechDocsAddons } from '@backstage/plugin-techdocs-react';
 import { ReportIssue } from '@backstage/plugin-techdocs-module-addons-contrib';
@@ -317,6 +321,26 @@ const apiDefinitionContent = (
   </Grid>
 );
 
+const ScalarApiReferenceContent = () => {
+  const { entity } = useEntity<ApiEntity>();
+
+  return (
+    <ApiReferenceReact
+      configuration={{
+        content: entity.spec.definition,
+        documentDownloadType: 'none',
+        hideClientButton: true,
+        hideDarkModeToggle: true,
+        layout: 'modern',
+        showSidebar: true,
+        telemetry: false,
+        theme: 'default',
+        withDefaultFonts: false,
+      }}
+    />
+  );
+};
+
 const defaultApiPage = (
   <EntityLayout>
     <EntityLayout.Route path="/" title="Overview">
@@ -337,6 +361,10 @@ const openApiApiPage = (
 
     <EntityLayout.Route path="/definition" title="Definition">
       {apiDefinitionContent}
+    </EntityLayout.Route>
+
+    <EntityLayout.Route path="/scalar" title="Scalar">
+      <ScalarApiReferenceContent />
     </EntityLayout.Route>
 
     <EntityLayout.Route path="/overview" title="Default Overview">
