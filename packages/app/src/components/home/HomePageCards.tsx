@@ -179,11 +179,11 @@ export const HomePageCards = () => {
   const actions = [
     {
       key: 'a0',
-      url: '/docs/default/component/connected-services-getting-started-techdocs/',
-      label: 'Getting started guide',
+      url: '/docs/default/component/building-trusted-digital-services-techdocs/',
+      label: 'Building trusted digital services',
       icon: <DocsIcon />,
-      buttonText: 'Start integrating',
-      desc: 'Learn how to build with Connected Services.',
+      buttonText: 'Start building',
+      desc: 'Learn about the building blocks used to build trusted digital services.',
     },
     {
       key: 'a1',
