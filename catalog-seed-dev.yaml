@@ -5,6 +5,9 @@ metadata:
 spec:
     type: url
     targets:
-      - https://github.com/bcgov/connected-services-techdocs/blob/dev/catalog-info.yaml
-      - https://github.com/bcgov/connected-services-techdocs/blob/main/getting-started/examples/seed-catalog-info.yaml
-      - https://github.com/bcgov/csit-api-governance-spectral-style-guide/blob/feature/aps-4316/catalog-info.yaml
+      - https://github.com/bcgov/connected-services-techdocs/blob/dev/getting-started/catalog-info.yaml
+      - https://github.com/bcgov/connected-services-techdocs/blob/dev/integration-toolkit/catalog-info.yaml
+      - https://github.com/bcgov/connected-services-techdocs/blob/dev/secure-data-exchange/catalog-info.yaml
+      - https://github.com/bcgov/connected-services-techdocs/blob/dev/getting-started/examples/seed-catalog-info.yaml
+      - https://github.com/bcgov/csit-api-governance-spectral-style-guide/blob/dev/techdocs/api-style-guides/catalog-info.yaml
+      - https://github.com/bcgov/csit-api-governance-spectral-style-guide/blob/dev/techdocs/sdx-api-standards/catalog-info.yaml
