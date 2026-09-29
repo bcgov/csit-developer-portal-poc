@@ -107,10 +107,6 @@ catalog:
         frequency: 120m
   locations:
     - type: url
-      target: https://github.com/bcgov/developer-experience-team/blob/main/developer-portal/catalog/catalog-seed-dev.yml
-      rules:
-        - allow: [Component]
-    - type: url
       target: https://github.com/bcgov/developer-experience-team/blob/main/developer-portal/catalog/templates-seed-dev.yml
       rules:
         - allow: [Template]
