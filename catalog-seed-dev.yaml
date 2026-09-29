@@ -8,7 +8,12 @@ spec:
       - https://github.com/bcgov/connected-services-techdocs/blob/dev/getting-started/catalog-info.yaml
       - https://github.com/bcgov/connected-services-techdocs/blob/dev/integration-toolkit/catalog-info.yaml
       - https://github.com/bcgov/connected-services-techdocs/blob/dev/secure-data-exchange/catalog-info.yaml
-      - https://github.com/bcgov/connected-services-techdocs/blob/dev/getting-started/examples/seed-catalog-info.yaml
+      - https://github.com/bcgov/connected-services-techdocs/blob/dev/getting-started/examples/api-example-1.yaml
+      - https://github.com/bcgov/connected-services-techdocs/blob/dev/getting-started/examples/api-example-2.yaml
+      - https://github.com/bcgov/connected-services-techdocs/blob/dev/getting-started/examples/api-example-3.yaml
+      - https://github.com/bcgov/connected-services-techdocs/blob/dev/getting-started/examples/api-example-4.yaml
+      - https://github.com/bcgov/connected-services-techdocs/blob/dev/getting-started/examples/api-example-5.yaml
+      - https://github.com/bcgov/connected-services-techdocs/blob/dev/getting-started/examples/api-example-6.yaml
       - https://github.com/bcgov/csit-api-governance-spectral-style-guide/blob/dev/techdocs/api-style-guides/catalog-info.yaml
       - https://github.com/bcgov/csit-api-governance-spectral-style-guide/blob/dev/techdocs/sdx-api-standards/catalog-info.yaml
       - https://github.com/bcgov/aps-infra-platform/blob/test/catalog-info.yaml
